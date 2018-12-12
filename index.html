@@ -52,7 +52,7 @@
                     <div class="col-md-12">
                         <div class="big-title text-center">
                             <h1>Cross-compiling the GNU Scientific Library for Windows on Linux</h1>
-                            <p class="lead">documentation version 1.0</p>
+                            <p class="lead">documentation version 1.1</p>
                         </div>
                         <!-- end title -->
                     </div>
@@ -124,59 +124,17 @@
                         </div>
                         <!-- end row -->
 
-                        <div class="row">
-                            <div class="col-md-12">
-                                <p>On a Linux operating system, install <a href="https://git-scm.com/" target="_blank">git</a> and use it to clone the MXE 	
+                        <a href="https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04" class="btn btn-primary">Install git on Linux</a> <a href="https://mxe.cc/#tutorial" class="btn btn-info">MXE Tutorial</a>
+                        <p>On a Linux operating system, install <a href="https://git-scm.com/" target="_blank">git</a> and use it to clone the MXE 	
 				   repository and install it  <a href="https://mxe.cc/#tutorial" target="_blank"> as instructed on their website</a>. Assuming 	
-			           that you have downloaded MXE to the directory $MXE_DIR (set the shell variable MXE_DIR, if necessary), </p>
-
-                                <h4>Bootstrap Grid System</h4>
-
-                                <pre class="brush: html; highlight: [2,4]">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        YOUR CODES GOES HERE
-                                    </div>
-                                </div>
-                            </div></pre>
-
-                                <p>Our you can use the grid system with 2 columns like this;</p>
-
-                                <pre class="brush: html">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        YOUR CODES GOES HERE
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        YOUR CODES GOES HERE
-                                    </div>
-                                </div>
-                            </div>
-                         </pre>
-
-                                <p>Our you can use the grid system with 3 columns like this;</p>
-
-                                <pre class="brush: html">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                        YOUR CODES GOES HERE
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                        YOUR CODES GOES HERE
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                                        YOUR CODES GOES HERE
-                                    </div>
-                                </div>
-                            </div>
-                         </pre>
-                            </div>
-                            <!-- end col -->
-                        </div>
-                        <!-- end row -->
+			           that you have downloaded MXE to the directory $MXE_DIR (set the shell variable MXE_DIR, if necessary). To install MXE, start a bash shell and run </p> 
+                        <div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+2</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #19177C">$ </span>git clone https://github.com/mxe/mxe.git
+<span style="color: #19177C">$ MXE_DIR</span><span style="color: #666666">=</span><span style="color: #19177C">$PWD</span>/mxe
+</pre></td></tr></table>
+			</div>
+ 
+			  
 
                     </section>
                     <!-- end section -->
@@ -190,18 +148,25 @@
                             <!-- end col -->
                         </div>
                         <!-- end row -->
-			<p>Assuming that you have downloaded MXE to the directory $MXE_DIR (set the shell variable MXE_DIR, if necessary), 
+			<p>Assuming that you have downloaded MXE to the directory $MXE_DIR, 
 			  you can compile MXE as follows.</p>
 			  <div style="font-size: 75%; display: inline; word-break: break-all; word-wrap: break-word;">
 If you want to compile 32-bit libraries, install the most basic tools in MXE with the command
 </div>
-<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #19177C">$ make cc </pre></div>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+2</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #19177C">$ </span><span style="color: #008000">cd</span> <span style="color: #19177C">$MXE_DIR</span>
+<span style="color: #19177C">$ </span>make cc
+</pre></td></tr></table></div>
+
 <br>
 <div style="font-size: 75%; display: inline; word-break: break-all; word-wrap: break-word;">
 If you want to compile 64-bit libraries, install the most basic tools in MXE with the command
 </div>
-<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><span style="color: #19177C">$</td><td><pre style="margin: 0; line-height: 125%">make <span style="color: #19177C">MXE_TARGETS</span><span style="color: #666666">=</span>x86_64-w64-mingw32.static cc
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
+2</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #19177C">$ </span><span style="color: #008000">cd</span> <span style="color: #19177C">$MXE_DIR</span>
+<span style="color: #19177C">$ </span>make <span style="color: #19177C">MXE_TARGETS</span><span style="color: #666666">=</span>x86_64-w64-mingw32.static cc
 </pre></td></tr></table></div>
+
 <br>
 <div style="font-size: 75%; display: inline; word-break: break-all; word-wrap: break-word;">
 After running the "make", append the PATH variable, as they instruct, to
@@ -210,7 +175,7 @@ After running the "make", append the PATH variable, as they instruct, to
 </pre></div>
              
 
-                        <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a>
+                        
                         <hr>
 
                     </section>
@@ -227,10 +192,15 @@ After running the "make", append the PATH variable, as they instruct, to
                         <!-- end row -->
 
                         <h4>Download and Unpack the GSL Source Code</h4>
+                        <a href="http://ftpmirror.gnu.org/gsl/" class="btn btn-primary">Download GSL</a> <a href="https://www.interserver.net/tips/kb/extract-tar-gz-files-using-linux-command-line/" class="btn btn-info">Unpacking tar.gz archives</a>
+                        <p>Download and unpack the GSL source code from <a href="http://ftpmirror.gnu.org/gsl/" target="_blank">here</a>. Note that, as of the writing of this page, the latest version of GSL is gsl-2.5, and the file to download is "gsl-2.5.tar.gz". Please update your commands to the latest working version. Unpack the source code with the command
 
-                        <p>Download and unpack the GSL source code from <a href="http://ftpmirror.gnu.org/gsl/" target="_blank">here</a>.</p>
+</p>
+<!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #19177C">$ </span>tar xvzf gsl-2.5.tar.gz -C <span style="color: #19177C">$MXE_DIR</span>
+</pre></td></tr></table></div>
 
-                        <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a>
+
+
 
                         <hr>
 
@@ -255,10 +225,13 @@ For 32-bit compilation, run
 </div>
 <!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
 2
-3</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #19177C">$ </span>./configure --host<span style="color: #666666">=</span>i686-w64-mingw32.static --enable-shared --disable-static --prefix<span style="color: #666666">=</span><span style="color: #19177C">$HOME</span>/.local/gsl-2.5/
+3
+4</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #19177C">$ </span><span style="color: #008000">cd</span> <span style="color: #19177C">$MXE_DIR</span>/gsl-2.5/
+<span style="color: #19177C">$ </span>./configure --host<span style="color: #666666">=</span>i686-w64-mingw32.static --enable-shared --disable-static --prefix<span style="color: #666666">=</span><span style="color: #19177C">$MXE_DIR</span>/gsl-2.5_i686/
 <span style="color: #19177C">$ </span>make
 <span style="color: #19177C">$ </span>make install
 </pre></td></tr></table></div>
+
 
 
 
@@ -268,43 +241,15 @@ For 64-bit compilation, run
 </div>
 <!-- HTML generated using hilite.me --><div style="background: #f8f8f8; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table><tr><td><pre style="margin: 0; line-height: 125%">1
 2
-3</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #19177C">$ </span>./configure --host<span style="color: #666666">=</span>x86_64-w64-mingw32.static --enable-shared --disable-static --prefix<span style="color: #666666">=</span><span style="color: #19177C">$HOME</span>/.local/gsl-2.5/
+3
+4</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #19177C">$ </span><span style="color: #008000">cd</span> <span style="color: #19177C">$MXE_DIR</span>/gsl-2.5/
+<span style="color: #19177C">$ </span>./configure --host<span style="color: #666666">=</span>x86_64-w64-mingw32.static --enable-shared --disable-static --prefix<span style="color: #666666">=</span><span style="color: #19177C">$MXE_DIR</span>/gsl-2.5_x86_64/
 <span style="color: #19177C">$ </span>make
 <span style="color: #19177C">$ </span>make install
 </pre></td></tr></table></div>
 
-		<p>     This will cross-compile the windows dll libraries and install them, together with the headers, to "$HOME/.local/gsl-2.5".</p>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="images/upload/plugin1.png" alt="" class="img-responsive img-thumbnail">
-                                <h4>Plugin name #1</h4>
-                                <p>Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</p>
-                            </div>
-                            <!-- end col -->
 
-                            <div class="col-md-4">
-                                <img src="images/upload/plugin2.png" alt="" class="img-responsive img-thumbnail">
-                                <h4>Plugin name #2</h4>
-                                <p>Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</p>
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-4">
-                                <img src="images/upload/plugin3.png" alt="" class="img-responsive img-thumbnail">
-                                <h4>Plugin name #3</h4>
-                                <p>Lorem the It is a long established fact that a reader will be distracted.. Please read more about WordPress here.</p>
-                            </div>
-                            <!-- end col -->
-
-                            <div class="col-md-12">
-                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-
-                                <div class="text-center">
-                                    <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end row -->
+		<p>     This will cross-compile the windows dll libraries and install them, together with the headers, to "$MXE_DIR/gsl-2.5_i686" or "$MXE_DIR/gsl-2.5_x86_64", depending on whether you're compiling for 32-bit (i686) or 64-bit (x86_64).</p>
 
                     </section>
                     <!-- end section -->
@@ -320,12 +265,9 @@ For 64-bit compilation, run
                         <!-- end row -->
 			<p>Copy the directories therein to your windows operating system and put them anywhere. I'm assuming that they have been put in  "C:\Program Files\gsl-2.5\". You may adjust this path to your install location.</p>
 
-<p>Finally, make sure to append your PATH environment variable on windows to point to the bin and lib directories, otherwise the compiled binaries won't run. The instructions to access the environment variable settings are different for different versions of windows. Goto <a href="https://www.java.com/en/download/help/path.xml" target="_blank">this link</a> and follow instructions for your operating system.  Note that you will need administrator access to do this.Once you have accessed the settings for "PATH", add to the existing variable the directories as shown in the screenshot for Windows 10.</p>
+<p>Finally, make sure to append your PATH environment variable on windows to point to the bin and lib directories, otherwise the compiled binaries won't run. The instructions to access the environment variable settings are different for different versions of windows. Goto <a href="https://www.java.com/en/download/help/path.xml" target="_blank">this link</a> and follow instructions for your operating system.  Note that you will need administrator access to do this.Once you have accessed the settings for "PATH", add to the existing variable the directories as shown in the screenshots below.</p>
+<a href="https://www.java.com/en/download/help/path.xml" class="btn btn-info">How to set the PATH variable on windows</a>
                         <div class="row">
-
-                            <div class="col-md-12">
-                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-                            </div>
 
                             <div class="col-md-4">
                                 <a href="upload/thumbnail.png" data-rel="prettyPhoto"><img src="images/upload/thumbnail.png" alt="" class="img-responsive img-thumbnail"></a>
@@ -373,6 +315,11 @@ For 64-bit compilation, run
                                 <h4>Changelog</h4>
 
                                 <pre class="brush: html">
+                                       -----------------------------------------------------------------------------------------
+                                        Version 1.1 - December 12, 2018
+                                        -----------------------------------------------------------------------------------------
+
+                                        - formatting changes, no new instructions added
 
                                         -----------------------------------------------------------------------------------------
                                         Version 1.0 - December 11, 2018
