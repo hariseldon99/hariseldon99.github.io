@@ -7,7 +7,7 @@ This is my github page. Below are links to codes and instructions related to my 
 
 2. [Class page for MPHYS0401](https://sites.google.com/a/phys.buruniv.ac.in/statmech2/) - Statistical Mechanics - II
 
-3. [Class page for MPHYS0404](https://sites.google.com/a/phys.buruniv.ac.in/numerical/[[) - Computer Applications in Physics - II
+3. [Class page for MPHYS0404](https://sites.google.com/a/phys.buruniv.ac.in/numerical/) - Computer Applications in Physics - II
 
 4. [Website for CBCS workshop](https://sites.google.com/phys.buruniv.ac.in/programming-workshop-cbcs/) on Computational Methods for Undergraduate Lecturers, The University of Burdwan. 
 
