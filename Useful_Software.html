@@ -1,0 +1,597 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+    <title>Useful Software</title>
+    <meta content="Analabha Roy" name="author">
+  </head>
+  <body style="background-color: white;">
+<div style="text-align: center;">
+<h1><span style="font-family: helvetica, verdana, arial;"><strong>Useful <span style="text-decoration: underline;">Free</span>/Open-Source Software: </strong></span></h1>
+<h1>&nbsp;</h1>
+</div>
+<h5><span style="font-family: helvetica, verdana, arial;"><strong>This is a list of free and open source software that I find useful for academic work. It contains numerical computing libraries, APIs, Integrated Development Environments, programming languages designed for scientific computing, and open source alternatives to proprietary tools. &nbsp;</strong></span></h5>
+<table style="text-align: left; width: 577px; height: 73px;" border="0" cellspacing="2" cellpadding="2">
+<tbody>
+<tr>
+<td style="vertical-align: top;">
+<h5 style="background-color: #ccffff;"><strong><span style="font-family: helvetica, verdana, arial;"><strong>Products highlighted in a blue background like this emphasis are strongly recommended </strong></span></strong></h5>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Index: </strong></p>
+<ol>
+<li><a href="#Numerical_libraries_and_APIs"><span style="font-weight: bold;">Numerical libraries and </span><span style="font-weight: bold;">APIs</span></a></li>
+<li><a href="#Data_storage_analysis_and_visualization"><span style="font-weight: bold;">Data storage, analysis and visualization software</span></a></li>
+<li><a href="#Computer_Algebra_Systems:"><span style="font-weight: bold;">Computer Algebra Systems</span></a></li>
+<li><a href="#Integrated_Development_Environments:"><span style="font-weight: bold;">Integrated Development Environments</span></a></li>
+<li><span style="font-weight: bold;"><a href="#Source_Control_Revision_Control:">Source Control/Revision Control</a> </span></li>
+<li><a href="#Tools_for_drawing_Feynman_Diagrams"><span style="font-weight: bold;">Tools for drawing Feynman Diagrams</span></a></li>
+<li><a href="#LaTeX_and_BibTeX_editors:"><span style="font-weight: bold;">LaTeX</span><span style="font-weight: bold;">&nbsp; and </span><span style="font-weight: bold;">BibTeX</span><span style="font-weight: bold;"> editors</span></a></li>
+<li><span style="font-weight: bold;"><a href="#Rendering_Math_on_the_web">Rendering math on the web</a></span></li>
+<li><a href="#arXiv_tools:"><span style="font-weight: bold;">arXiv tools</span></a></li>
+<li><a href="#Image_and_Document_Manipulation"><span style="font-weight: bold;">Image and Document Manipulation</span></a></li>
+<li><a href="#PDF_Creators:"><span style="font-weight: bold;">PDF Creation and Manipulation </span></a></li>
+<li><a href="#Unix_Pseudoshells_for_Windows:"><span style="font-weight: bold;">Unix Pseudoshells for Windows</span></a></li>
+<li><a href="#Website_AuthoringComposition:"><span style="font-weight: bold;">Website Authoring/Composition</span></a></li>
+<li><a href="#Online_Backup_and_Cloud_Storage"><span style="font-weight: bold;">Online Backup and Cloud Storage</span></a></li>
+<li><span style="font-weight: bold;"><a href="#Open_Source_Fonts_for_Presentations_and">Open Source Fonts for Presentations and Printing</a> </span></li>
+<li><a href="#Miscellaneous"><span style="font-weight: bold;">Miscellaneous</span></a></li>
+</ol>
+<p>&nbsp;</p>
+<table style="text-align: left; width: 100%;" border="1" cellspacing="2" cellpadding="2">
+<tbody>
+<tr>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;"><a name="Numerical_libraries_and_APIs"></a>Numerical libraries and </span><a style="font-weight: bold;" href="http://money.howstuffworks.com/business-communications/how-to-leverage-an-api-for-conferencing1.htm">APIs:</a></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Name and Link</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Description</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Supported Platforms</span></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.gnu.org/software/gsl/">GNU Scientific Library (gsl) </a></td>
+<td style="vertical-align: top; background-color: #ccffff;">A powerful, free, open source and considerably less painful alternative to <a href="http://www.nr.com/">Numerical Recipes</a> or <a href="http://www.nag.co.uk/">NAG.</a> <br > <br > Notes:
+<ol>
+<li>For those afflicted with <a href="http://www.lysator.liu.se/c/num-recipes-in-c.html#bad">fortranitis</a>, a <a href="http://groups.engin.umd.umich.edu/CIS/course.des/cis400/fortran/fortran.html">FORTRAN</a> interface to gsl (tested with <a href="http://gcc.gnu.org/wiki/GFortran">gfortran</a> 4.6.3 on x86-64 linux kernel 3.2.0-24 and <a href="http://bzr.savannah.gnu.org/lh/gsl/trunk/annotate/head:/NEWS">gsl version 1.15</a>) can be<a href="http://www.lrz.de/services/software/mathematik/gsl/fortran/"> found here .</a></li>
+<li><a href="http://o2scl.sourceforge.net/">Click here</a> for <a href="http://www2.research.att.com/%7Ebs/bs_faq.html#what-is">C++</a> bindings to gsl</li>
+<li><a href="http://pygsl.sourceforge.net/">Click here</a> for <a href="http://www.python.org/">python</a> bindings to gsl</li>
+<li>Can be used in windows through <a href="http://www.cygwin.com/">Cygwin</a> or <a href="GSL_devcpp.html">MinGW</a></li>
+</ol>
+</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="http://gcc.gnu.org/onlinedocs/libquadmath/">libquadmath</a></td>
+<td>GCC Quad-Precision Math Library API<br > <br > Note: <br> In this library, the 128-bit floating point type "<code>__float128"</code> has twice as many bits as a <code>double</code>. The <code>quadmath</code> functions have the same name as their standard <code>math.h</code> counterparts, but with a <code>q</code> added on the end, such as <code>log10q</code> and <code>fmodq</code> below.</td>
+<td><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td><a href="http://mpmath.org/">mpmath for Python</a></td>
+<td>Python library for real and complex floating-point arithmetic with arbitrary precision</td>
+<td><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://developer.gnome.org/glib/stable/">Glib</a></td>
+<td style="vertical-align: top;">Cross-platform software utility library that provides data structures, linked lists, hash tables, <br> dynamic strings , dynamic arrays, balanced binary trees, N-ary trees, quarks, keyed data lists, relations and tuples.<br> <small><br> <br> Notes:</small>
+<ol>
+<li><small>Can be used in windows through </small><strong><small><a style="font-weight: normal;" href="http://www.cygwin.com/">Cygwin</a> </small></strong></li>
+<li><small>&nbsp;Another howto manual available <a style="font-family: monospace;" href="http://www.ibm.com/developerworks/linux/tutorials/l-glib/index.html">here</a></small>.</li>
+</ol>
+</td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a><small> </small></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.scipy.org/SciPy">Scipy</a>/<a href="http://matplotlib.org/">Matplotlib</a><br> <br> <br> <a href="http://python-xy.github.io/">Python(x,y)</a>&nbsp;/ <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">Library modules&nbsp; for the <a href="http://python.org/">Python programming language&nbsp;</a> that are designed for scientific/numerical computing and data plotting/graphics<br> <br> Scientific <a href="http://python.org/">Python</a> distributions</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>,&nbsp;<a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.open-mpi.org/">OpenMPI </a></td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.mcs.anl.gov/research/projects/mpi/">MPI message passing</a> in <a href="https://computing.llnl.gov/tutorials/parallel_comp/">parallel computing</a> environments</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://gcc.gnu.org/projects/gomp/">GOMP</a></td>
+<td style="vertical-align: top;">Open source implementation of the <a href="http://openmp.org/">OpenMP</a> <a href="http://www.csl.mtu.edu/cs4411.ck/www/NOTES/process/shm/what-is-shm.html">shared memory</a> <a href="https://computing.llnl.gov/tutorials/parallel_comp/">parallel computing</a> standard. Can be&nbsp; used with <a href="http://gcc.gnu.org/">gcc</a>/<a href="http://gcc.gnu.org/wiki/GFortran">gfortran</a> and other compilers. Also see <a href="https://computing.llnl.gov/tutorials/pthreads/">pthreads.</a><br> <br> <small>Note:&nbsp; </small><small>Can be used in windows through </small><strong><small><a href="http://www.cygwin.com/">Cygwin</a> or <a href="http://www.mingw.org">MinGW</a></small></strong></td>
+<td style="vertical-align: top;"><strong><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a><small> </small></strong></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://www.openblas.net/">Openblas</a></td>
+<td style="vertical-align: top;">
+<p>Open Source implementation of BLAS (Basic Linear Algebra Subprograms) routines. <a href="https://github.com/xianyi/OpenBLAS">Multithreaded</a>&nbsp;support, and also has&nbsp;<a href="http://www.netlib.org/lapack/">lapack</a>/<a href="http://www.netlib.org/lapack/lapacke.html">lapacke</a> built in! Available for&nbsp;FORTRAN and C/C++ &nbsp;(via <a href="http://www.netlib.org/blas/#_cblas">cblas</a>) programmers.</p>
+<p><small>Note: &nbsp;User manual can be found&nbsp;<a href="https://github.com/xianyi/OpenBLAS/wiki/User-Manual">here</a></small></p>
+</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.grycap.upv.es/slepc/">Slepc</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">Scalable Linear Eigenvalue Problem Computation:<br> <a href="https://computing.llnl.gov/tutorials/parallel_comp/">Parallel</a> linear algebra and matrix diagonalization using MPI and <a href="http://www.mcs.anl.gov/petsc/">PetSc</a>, the Portable Extensible Toolkit for Scientific Computation, in<a href="https://computing.llnl.gov/tutorials/parallel_comp/"> parallel computing </a>environments. Contains parallel <a href="http://www.netlib.org/lapack/">Lapack</a> implementation<br> <br> Note:&nbsp; Can be used in windows through <a href="http://www.cygwin.com/">Cygwin</a>.</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a> , <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;"><a name="Data_storage_analysis_and_visualization"></a>Data storage, analysis and visualization software:</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Name and Link</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Description</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Supported Platforms</span></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://www.hdfgroup.org/">Heirarchical </a><br> <a href="http://www.hdfgroup.org/">Data Format</a> (HDF),<br> <br> <br> <a href="http://www.unidata.ucar.edu/software/netcdf/">Network </a><br> <a href="http://www.unidata.ucar.edu/software/netcdf/">Common Data Form</a> (NetCDF)</td>
+<td style="vertical-align: top;"><span style="color: #001607;">HDF5 is a unique technology suite that makes possible the management of extremely large and complex <br> data collections. HDF file viewers are <a href="http://www.hdfgroup.org/hdf-java-html/hdfview/index.html">HDFView</a> and <a href="http://vitables.org/">ViTables</a><br> <br> NetCDF is a more advanced version of HDF.</span></td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://code.enthought.com/projects/mayavi/">Mayavi</a></td>
+<td style="vertical-align: top;">3D visualization of scientific data</td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://soft.proindependent.com/qtiplot.html">QtiPlot</a>/<br> <a href="http://scidavis.sourceforge.net/">SciDavis</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">Open Source clones of <a href="http://www.originlab.com/">Origin</a><br> <br> Note: Windows binaries for qtiplot can be obtained <a href="http://www.cells.es/Members/cpascual/docs/unofficial-qtiplot-packages-for-windows">here</a></td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://github.com/pn2200/g3data/">g3data</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">Extract data from images of plots<br> <br> Note:&nbsp; Can be used in windows through <a href="http://www.cygwin.com/">Cygwin</a>.</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>,<a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: silver;"><a name="Computer_Algebra_Systems:"></a><a style="font-weight: bold;" href="http://www.math.wpi.edu/IQP/BVCalcHist/calc5.html">Computer Algebra Systems:</a></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Name and Link</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Description</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Supported Platforms</span></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://www.gnu.org/software/octave/">GNU Octave</a></td>
+<td style="vertical-align: top;">Open Source <a href="http://www.mathworks.com/">MATLAB</a> clone<br> <br> <small>Notes: <br> Linux GUI can be <a href="http://edu.kde.org/applications/mathematics/cantor/">found here&nbsp;</a></small> <small><a href="https://launchpad.net/ubuntu/precise/+package/cantor-backend-octave">(via backend)</a><br> Windows GUI can be <a href="http://guioctave.com/">found here</a> <br> There is an Online Octave service called <a href="http://www.verbosus.com/">Verbosus</a>&nbsp;</small></td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="https://www.scilab.org">SciLab</a></td>
+<td style="vertical-align: top;">Powerful and versatile Open Source Software for Numerical Computation</td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+
+
+<tr>
+<td style="background-color: #ccffff;">&nbsp;</td>
+<td style="background-color: #ccffff;"><a href="https://jupyter.org/">Jupyter</a>/<a href="http://ipython.org/">IPython</a></td>
+<td style="background-color: #ccffff;">Interactive Python provides a shell for interactive computing using <a href="http://www.python.org/">Python</a> and other languages. Useful python libraries include: <br>
+<ol>
+<li><a href="http://www.scipy.org/scipylib/index.html">scipy</a> -&nbsp; Scientific Python</li>
+<li><a href="http://numpy.scipy.org/">numpy</a> - Numerical Python</li>
+<li><a href="http://matplotlib.org/">matplotlib</a> - Technical Graphics</li>
+<li><a href="http://sympy.org/">sympy</a> - Symbolic computing</li>
+<li><a href="http://mpi4py.scipy.org/">mpi4py</a> - Python bindings for MPI</li>
+</ol>
+</td>
+<td style="background-color: #ccffff; avertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://homepage.cem.itesm.mx/lgomez/quantum/">Quantum</a></td>
+<td style="vertical-align: top;">Free <a href="http://www.wolfram.com/mathematica/">Mathematica</a> add-on for <a href="http://vergil.chemistry.gatech.edu/notes/intro_estruc/node5.html">Dirac bra-ket notation</a> and quantum operator algebra.</td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://nrgljubljana.ijs.si/sneg/">SNEG library</a></td>
+<td style="vertical-align: top;"><a href="http://www.wolfram.com/mathematica/">Mathematica</a> package that provides a framework for performing calculations using <a href="http://yclept.ucdavis.edu/course/242/2Q_Fradkin.pdf">second quantization.</a></td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://physics.ucsc.edu/%7Esriram/DiracQ/DiracQ_Home.html">DiracQ</a></td>
+<td style="vertical-align: top;"><a href="http://www.wolfram.com/mathematica/">Mathematica</a> package&nbsp; that performs&nbsp; several standard simplifications and&nbsp; manipulations with operators that arise in quantum&nbsp; many body physics. The set of operators include Fermions, Bosons and spins located on a lattice,&nbsp; and has the&nbsp; flexibility for extensions.</td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: silver;"><a name="Integrated_Development_Environments:"></a><a style="font-weight: bold;" href="http://java.sun.com/developer/technicalArticles/tools/intro.html">Integrated Development Environments:</a></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Name and Link</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Description</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Supported Platforms</span></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="https://www.geany.org/">Geany</a>&nbsp;&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;">Basic&nbsp;<a href="http://java.sun.com/developer/technicalArticles/tools/intro.html">Integrated Development Environment</a> using <a href="http://www.gtk.org/">GTK+</a>&nbsp;on Linux</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://www.codeblocks.org/">Code::Blocks</a><br> <br> <br> <a href="http://darmar.vgtu.lt/">Code::Blocks</a><br> <a href="http://darmar.vgtu.lt/"> for FORTRAN</a></td>
+<td style="vertical-align: top;"><a href="http://java.sun.com/developer/technicalArticles/tools/intro.html">Integrated Development Environment</a> for multiple project types<br> <br> For those unfortunate souls suffering from <a href="http://www.lysator.liu.se/c/num-recipes-in-c.html#bad">fortranitis</a><br> <small>Note: Needs external FORTRAN compiler. </small><small> <a href="http://darmar.vgtu.lt/index.php/notes">Several are supported.</a> </small><small>Recommend <a href="http://gcc.gnu.org/wiki/GFortran">gfortran</a> via <a href="http://www.mingw.org/">MinGW</a></small>.</td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://www.pnotepad.org/">Programmer's </a><br> <a href="http://www.pnotepad.org/">Notepad</a></td>
+<td style="vertical-align: top;"><a href="http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/win_notepad_whatis_intro.mspx?mfr=true">Windows Notepad</a> for programmers</td>
+<td style="vertical-align: top;"><a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.bloodshed.net/devcpp.html">Dev-C++</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">C/C++ IDE for windows (runs with <a href="http://www.mingw.org/">MinGW</a> or <a href="http://www.cygwin.com/">Cygwin</a> based compilers)</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="https://github.com/spyder-ide/spyder">Spyder</a></td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://java.sun.com/developer/technicalArticles/tools/intro.html">Integrated Development Environment</a> for <a href="http://www.python.org/">Python</a> designed with scientific computing in mind.</td>
+<td style="vertical-align: top; background-color: #ccffff;"><img style="width: 30px; height: 35px;" src="files/linux-icon.png" alt="" >, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;"><a name="Source_Control_Revision_Control:"></a><a href="http://www.ericsink.com/scm/source_control.html">Source Control</a>/ <a href="http://betterexplained.com/articles/a-visual-guide-to-version-control/">Revision Control</a>:</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Name and Link</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Description</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Supported Platforms</span></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://git-scm.com/">Git</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">A <a href="https://www.ibm.com/developerworks/aix/library/au-dist_ver_control/">distributed vcs</a> that is more modern and decentralized than the older <a href="https://subversion.apache.org/">svn</a>. Can be used with servers like <a href="https://github.com">GitHub</a> or <a href="https://bitbucket.org">Bitbucket</a></td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;"><a name="Tools_for_drawing_Feynman_Diagrams"></a>Tools for drawing <a href="http://web.mit.edu/dikaiser/www/FdsAmSci.pdf">Feynman Diagrams:</a></span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Name and Link</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Description</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Supported Platforms</span></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://jaxodraw.sourceforge.net/">JaxoDraw</a></td>
+<td style="vertical-align: top;">Java program for drawing Feynman Diagrams</td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://inkscape.org/">Inkscape</a></td>
+<td style="vertical-align: top;"><a href="http://www.techterms.com/definition/vectorgraphic">Vector Graphics</a> editor. Can be used to draw Feynman diagrams <a href="http://www.youtube.com/watch?v=YKrzqHrWlKc">by drawing parametric curves</a></td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://www.lpthe.jussieu.fr/%7Esalam/feynfig/">FeynFig</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td style="vertical-align: top;">Program for generating Feynman Diagrams in <a href="http://www.xfig.org/">xfig</a> format. Also contains an <a href="http://www.xfig.org/userman/drawing.html#library">xfig library</a> package containing Feynman Diagram elements.</td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: silver;"><a name="LaTeX_and_BibTeX_editors:"></a><a style="font-weight: bold;" href="http://www.latex-project.org/">LaTeX</a><span style="font-weight: bold;">&nbsp; and </span><a style="font-weight: bold;" href="http://www.bibtex.org/">BibTeX</a><span style="font-weight: bold;"> editors:</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Name and Link</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Description</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Supported Platforms</span></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.texstudio.org/">TexStudio</a></td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.latex-project.org/">LaTeX</a> editor. Cross-platform</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: white;">&nbsp;</td>
+<td style="vertical-align: top; background-color: white;"><a href="http://www.tug.org/texworks/">TeXworks</a><br> <a href="http://www.texniccenter.org/">TeXnicCenter</a></td>
+<td style="vertical-align: top; background-color: white;">Free <a href="http://www.latex-project.org/">LaTeX</a> editors</td>
+<td style="vertical-align: top; background-color: white;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="https://github.com/JabRef/jabref">JabRef</a>&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://www.bibtex.org/">BibTeX</a> editor written in <a href="http://www.java.com/en/">java</a></td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://latex-mk.sourceforge.net/">LaTeX-Mk</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">Uses <a href="http://www.gnu.org/software/make/">GNU Make</a> to render complex <a href="http://www.latex-project.org/">LaTeX</a> docs, simplifying management.<br> <small>Note:&nbsp; </small><small>Can be used in windows through </small><strong><small><a href="http://www.cygwin.com/">Cygwin</a> or <a href="http://www.mingw.org/">MinGW</a></small></strong></td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://roland65.free.fr/texmaths/">TexMaths</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">LaTeX extension for <a href="http://www.libreoffice.org/"> LibreOffice</a><br> Very useful for embedding LaTeX equations in presentations</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: silver;"><a name="Rendering_Math_on_the_web"></a><a href="http://dx.doi.org/10.1511/2009.77.98"><span style="text-decoration: underline;"><span style="font-weight: bold;">Rendering Math on the web</span></span></a></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Name and Link</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Description</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Supported Platforms</span></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.mathjax.org/">MathJax</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">Can render <a href="http://www.latex-project.org/">LaTeX</a> or <a href="http://www.w3.org/Math/">MathML</a> in situ in the web page itself. Very handy!</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="https://chrome.google.com/webstore/detail/tex-for-gmail/gjnmclkoadjdljnfmbnnhaahilafoeji?hl=en">TeX for Gmail</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">Can render <a href="http://www.latex-project.org/">LaTeX</a> in Gmail. Super handy!</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://math.etsu.edu/LaTeXMathML/">LaTeXMathML</a><span style="text-decoration: underline;"><br> </span><a href="http://www.math.union.edu/%7Edpvc/jsMath/welcome.html">jsMath</a><br> <a href="http://www1.chapman.edu/%7Ejipsen/mathml/asciimath.html">ASCIIMathML</a></td>
+<td style="vertical-align: top;">Similar to <a href="http://www.mathjax.org/">MathJax</a> above.</td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="https://www.libreoffice.org/discover/math/">LibreOffice Math</a></td>
+<td style="vertical-align: top;">Can render math and export it to <a href="http://www.w3.org/Math/">MathML</a></td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.texpaste.com/">TexPaste</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">A <a href="http://pastebin.ca/">pastebin</a> for <a href="http://www.latex-project.org/">LaTeX</a>.</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;"><a name="arXiv_tools:"></a><a href="http://arxiv.org/">arXiv</a> tools:</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Name and Link</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Description</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Supported Platforms</span></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="https://itunes.apple.com/us/app/arx-the-arxiv-reader/id807032888?mt=8"><span style="text-decoration: underline;">arX</span></a></td>
+<td style="vertical-align: top;">iPhone app to access arXiv<big><big></big></big></td>
+<td style="vertical-align: top;"><a href="http://www.apple.com/ios/"><img style="border: 0px solid; width: 30px; height: 19px;" src="files/iOS-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="https://play.google.com/store/apps/details?id=com.commonsware.android.arXiv ">arXiv mobile</a><br> <a href="https://play.google.com/store/apps/details?id=com.commonsware.android.arXiv"> for Android</a></td>
+<td style="vertical-align: top;">Cellphone app for browsing arXiv</td>
+<td style="vertical-align: top;"><a href="http://www.android.com/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Android_icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;"><a name="Image_and_Document_Manipulation"></a>Image and Document Manipulation:</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Name and Link</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Description</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Supported Platforms</span></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.imagemagick.org/">ImageMagick</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">Powerful library for manipulating/compressing images</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://converseen.fasterland.net/">Converseen</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">Powerful <a href="http://www.webopedia.com/TERM/B/batch_processing.html">batch processing</a> based graphical interface to <a href="http://www.imagemagick.org/">ImageMagick</a></td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/">Pdftk</a>: The PDF toolkit</td>
+<td style="vertical-align: top;">Toolkit for hacking pdf files<br> <br> <small>Notes: <br> Linux GUI can be <a href="http://pdfchain.sourceforge.net/">found here</a><br> Windows GUI can be <a href="http://www.angusj.com/pdftkb/#pdftkbuilder">found here</a> or <a href="http://www.paehl.de/pdf/gui_pdftk.html">here</a></small></td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a> , <img style="width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" >&nbsp;<small></small> <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://xournal.sourceforge.net/">Xournal</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">FOSS clone of <a href="http://windows.microsoft.com/en-US/windows7/Create-and-personalize-handwritten-notes-using-Windows-Journal">Windows Journal</a>. Can be used as a PDF annotator.<br> <small> Note: Windows client can be <a href="http://sourceforge.net/projects/xournal/files/xournal-win32-binaries/">found here</a></small></td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" >, <img style="width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.pdfescape.com/">PDFescape</a><br> <a href="https://www.pdfbuddy.com/">PDF Buddy (Freemium)</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">Online tools to annotate PDF documents. Can be used to fill PDF forms. Includes<a href="http://help.adobe.com/en_US/Acrobat/9.0/Standard/WS58a04a822e3e50102bd615109794195ff-7e77.w.html"> sticky notes</a>!</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a> , <img style="width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" >&nbsp; <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://pdfedit.cz/en/index.html">pdfedit</a></td>
+<td style="vertical-align: top;">Free editor for PDF documents</td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://rses.anu.edu.au/%7Eandy/jpeg2eps/">Jpeg2eps</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">Script for embedding jpegs into eps containers using <a href="http://pages.cs.wisc.edu/%7Eghost/">ghostscript</a></td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;"><a name="PDF_Creators:"></a>PDF Creation and Manipulation:</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Name and Link</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Description</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Supported Platforms</span></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://www.cups-pdf.de/">cups-pdf</a></td>
+<td style="vertical-align: top;">Use the print dialog to generate PDF files from any application.</td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://www.pdfforge.org/pdfcreator"> PDFCreator</a></td>
+<td style="vertical-align: top;">Use the print dialog to generate PDF files from any application.</td>
+<td style="vertical-align: top;"><a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://www.qtrac.eu/diffpdf.html">DiffPDF</a></td>
+<td style="vertical-align: top;">DiffPDF is used to compare two PDF files, textually or visually.</td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linuxquestions.org/questions/linuxquestions-org-member-success-stories-23/how-to-fill-pdf-forms-even-read-only-%3B-better-than-acroread-v9-for-linux-796720/">Filling PDF</a><a href="http://www.linuxquestions.org/questions/linuxquestions-org-member-success-stories-23/how-to-fill-pdf-forms-even-read-only-%3B-better-than-acroread-v9-for-linux-796720/"> forms in </a><a href="http://www.linuxquestions.org/questions/linuxquestions-org-member-success-stories-23/how-to-fill-pdf-forms-even-read-only-%3B-better-than-acroread-v9-for-linux-796720/">Office apps</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">Howto on filling PDF forms using <a href="http://www.openoffice.org/">OpenOffice</a>/<a href="http://www.libreoffice.org/">LibreOffice</a>.</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;"><a name="Unix_Pseudoshells_for_Windows:"></a>Unix Pseudoshells for Windows:</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Name and Link</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Description</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Supported Platforms</span></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.mingw.org/">MinGW</a></td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.gnu.org/">GNU</a> <a href="http://www.linfo.org/shell.html">shell environment</a> for Windows</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://www.cygwin.com/">Cygwin</a></td>
+<td style="vertical-align: top;">Software for imitating a Unix environment on Windows</td>
+<td style="vertical-align: top;"><a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;"><a name="Website_AuthoringComposition:"></a><a href="http://webdesign.about.com/">Website Authoring/Composition:</a></span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Name and Link</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Description</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Supported Platforms</span></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.bluegriffon.org/">Bluegriffon</a></td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.merriam-webster.com/dictionary/wysiwyg">WYSIWYG</a> Web page authoring software</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/win_notepad_whatis_intro.mspx?mfr=true">Notepad</a>,&nbsp;<a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a></td>
+<td style="vertical-align: top;">Simple <a href="http://www.text-editor.org/">text editor</a>, <a href="http://webdesign.about.com/od/beginningtutorials/ss/aassnotepad1.htm">ahem</a>.</td>
+<td style="vertical-align: top;"><strong><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></strong></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;"><a name="Online_Backup_and_Cloud_Storage"></a>Online Backup and <a href="http://oceanstore.cs.berkeley.edu/publications/papers/pdf/ieeeic.pdf">Cloud Storage</a>:</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Name and Link</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Description</span></td>
+<td style="vertical-align: top; background-color: silver;"><span style="font-weight: bold;">Supported Platforms</span></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://dropbox.com/">Dropbox</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">Sync files and documents with the dropbox server and any desktop, laptop or portable computing device running the dropbox software.</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" >,</a><a href="http://www.apple.com/ios/"><img style="border: 0px solid; width: 30px; height: 19px;" src="files/iOS-icon.png" alt="" >,</a><a href="http://www.android.com/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Android_icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://portableapps.com/">PortableApps.com</a></td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://web.archive.org/web/20100907213345/http://sphinx-soft.com/Portable/">Portable application conversion technology.</a> Install compatible apps like <a href="http://portableapps.com/apps/office/libreoffice_portable">LibreOffice</a>, <a href="http://portableapps.com/apps/graphics_pictures/inkscape_portable">Inkscape</a>, <a href="http://portableapps.com/apps/internet/firefox_portable">Firefox</a> and others into <a href="http://computer.howstuffworks.com/removable-storage.htm">removable media</a> or <a href="http://oceanstore.cs.berkeley.edu/publications/papers/pdf/ieeeic.pdf">cloud storage</a>. Access them on the go from any computer.</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #cccccc;"><span style="font-weight: bold;"><a name="Open_Source_Fonts_for_Presentations_and"></a>Open Source Fonts for Presentations and Printing</span></td>
+<td style="vertical-align: top; background-color: #cccccc;"><span style="font-weight: bold;">Name and Link</span></td>
+<td style="vertical-align: top; background-color: #cccccc;"><span style="font-weight: bold;">Description</span></td>
+<td style="vertical-align: top; background-color: #cccccc;"><span style="font-weight: bold;">Supported Platforms</span></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="https://www.gnome.org/fonts/">Bitstream Vera Fonts</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">Group typeface font. Looks good when printed.<br> <br> <small> Note:&nbsp; <a href="http://www.latex-project.org/">LaTeX</a> users can use the Type 1 Postscript version of these fonts using the <a href="http://www.ctan.org/pkg/bera"><span style="font-style: italic;">Bera</span> package.</a></small></td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.droidfonts.com/">Droid Font Family</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">Mobile-friendly fonts. Originally designed for Android by Google. Download from <a href="http://www.fontsquirrel.com/fonts/Droid-Sans">here</a>.<br> <br> <small> Note:&nbsp; <a href="http://www.latex-project.org/">LaTeX</a> users can use&nbsp; these fonts using the <a href="http://www.ctan.org/pkg/droid"><span style="font-style: italic;">droid</span> package.</a></small></td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="https://fedorahosted.org/liberation-fonts/">Liberation Fonts</a></td>
+<td style="vertical-align: top;">Fonts that have <a href="http://www.ascendercorp.com/support/type-glossary/">metric compatibility</a> with <a href="http://www.microsoft.com/typography/fonts/">Microsoft fonts</a> like Arial, Times New Roman, and Courier New.</td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://www.linuxlibertine.org/index.php?id=1&amp;L=1">Libertine Fonts</a></td>
+<td style="vertical-align: top;"><a href="http://www.linuxtoday.com/infrastructure/2006083000826OSSW">Open source alternative</a> to Microsoft's <a href="http://www.microsoft.com/typography/fonts/">Times font family</a>.</td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://font.ubuntu.com/">Ubuntu Font Family</a></td>
+<td style="vertical-align: top;">The default fonts of <a href="http://www.ubuntu.com/">Ubuntu Linux.</a></td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: silver;"><a name="Miscellaneous"></a> <span style="font-weight: bold;">Miscellaneous:</span></td>
+<td style="vertical-align: top; font-weight: bold; background-color: silver;">Name(s) and Link(s)</td>
+<td style="vertical-align: top; font-weight: bold; background-color: silver;">Description</td>
+<td style="vertical-align: top; font-weight: bold; background-color: silver;">Supported Platforms</td>
+</tr>
+<tr>
+<td style="vertical-align: top;"><span style="font-weight: bold;">File Transfer:</span></td>
+<td style="vertical-align: top;"><a href="http://winscp.net/eng/index.php">WinSCP</a>, <a href="http://filezilla-project.org/">Filezilla</a></td>
+<td style="vertical-align: top;">Useful tools to transfer files to and from a computer over a network. Supports <a href="http://tools.ietf.org/html/rfc959">ftp</a>, <a href="http://www.openssh.com/">ssh, scp, sftp</a> and other protocols</td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;"><span style="font-weight: bold;">Diff Viewer:</span></td>
+<td style="vertical-align: top;"><a href="http://meldmerge.org/">Meld </a></td>
+<td style="vertical-align: top;">Visual <a href="http://pubs.opengroup.org/onlinepubs/9699919799/utilities/diff.html">diff</a>&nbsp;and merge tool targeted at developers</td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a><a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;"><span style="font-weight: bold;">File Archiving and Compression: </span></td>
+<td style="vertical-align: top;"><a href="http://www.7-zip.org/">7-zip</a>, <a href="http://utils.kde.org/projects/ark/">ark</a></td>
+<td style="vertical-align: top;">Tools for archiving files and compressing them for transfer over networks, email attachments, <a href="http://arxiv.org/">arXiv</a> uploads etc.</td>
+<td style="vertical-align: top;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;"><span style="font-weight: bold;">File splitters and joiners </span></td>
+<td style="vertical-align: top;"><a href="http://www.hjsplit.org/">HJSplit</a>, <a href="http://lxsplit.sourceforge.net/">lxSplit</a></td>
+<td style="vertical-align: top;">Tools for splitting and recombining large files into and from smaller files.</td>
+<td style="vertical-align: top;"><strong><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></strong></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: black;">&nbsp;</td>
+<td style="vertical-align: top; background-color: black;">&nbsp;</td>
+<td style="vertical-align: top; background-color: black;">&nbsp;</td>
+<td style="vertical-align: top; background-color: black;">&nbsp;</td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="https://www.keepassx.org/">KeepassX</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">Create <a href="http://www.linuxjournal.com/article/2590">encrypted filesystems </a>for sensitive data</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top; background-color: #ccffff;">&nbsp;</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://calibre-ebook.com/">Calibre</a></td>
+<td style="vertical-align: top; background-color: #ccffff;">Powerful <a href="http://www.merriam-webster.com/dictionary/ebook">E-book</a> and paper collection manager</td>
+<td style="vertical-align: top; background-color: #ccffff;"><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" ></a>, <a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" ></a>, <a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="https://play.google.com/store/apps/details?id=net.momodalo.app.vimtouch">VimTouch</a></td>
+<td style="vertical-align: top;"><a href="http://thomer.com/vi/vi.html">Vi</a>/<a href="http://www.vim.org/">Vim</a> editor for android. Wicked cool!</td>
+<td style="vertical-align: top;"><a href="http://www.android.com/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Android_icon.png" alt="" ></a></td>
+</tr>
+<tr>
+<td style="vertical-align: top;">&nbsp;</td>
+<td style="vertical-align: top;"><a href="http://edu.kde.org/kalzium/">Kalzium</a><br> <br> <br> <a href="http://sourceforge.net/projects/qperiodictable/">QPeriodicTable</a></td>
+<td style="vertical-align: top;"><a href="http://www.webelements.com/">Periodic Table of Elements</a> with additional tools for atomic/molecular physics/chemistry. Linux only<br> <br> A Similar app for Windows and Mac</td>
+<td style="vertical-align: top;"><strong><a href="http://www.linux.com/"><img style="border: 0px solid; width: 30px; height: 35px;" src="files/linux-icon.png" alt="" >, </a></strong><strong><a href="http://windows.microsoft.com/en-US/windows/home"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/Windows-icon.png" alt="" >, </a></strong><strong><a href="http://www.apple.com/macosx/"><img style="border: 0px solid; width: 30px; height: 30px;" src="files/mac_icon.jpg" alt="" ></a></strong></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<!--This is a comment. Comments are not displayed in the browser-->
+<p>&nbsp;</p>
+<p><a href="http://validator.w3.org/check?uri=http%3A%2F%2Fweb2.ph.utexas.edu/~daneel/Useful_Software.html"><img src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Transitional" width="88" height="31" ></a></p>
