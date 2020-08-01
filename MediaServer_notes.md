@@ -241,8 +241,6 @@ Since all the different softwares installed above have to communicate content da
 
 11. MondoRescue : http://www.mondorescue.org
 
-## Special system users/groups. All listed users belong to all listed groups and homedirs are writable to all
-
 
 ## TODO:
 1. Look into usenet downloading.
