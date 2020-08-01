@@ -224,6 +224,12 @@ The setup instructions can be a bit confusing, so I summarize below.
      $ cd OrganizrInstaller/ubuntu/oui
      $ sudo bash ./ou_installer.sh
      ```
+  3. Finally, an interesting trick can be to run a simple PHP-web based system monitor and enbed the output on your organizr home page. I chose [eZServerMonitor](https://www.ezservermonitor.com/) due to its simplicity and low footprint. Install it in a subdirectory of your organizr install, then open Organizr page in your browser, go to 'settings -> Tab Editor -> Homepage Items -> CUSTOMHEML-1' and input the following html markup tag 
+  
+  ```html
+   <iframe src="http://192.168.1.2/apps/ezservermonitor/index.php" name="System Monitor" height="1400px" width="100%" title="System Monitor"></iframe>
+  ```
+  Once this is saved and enabled, the Organizr homepage should show a nice big embedded frame with all your machine status information in it.
      
 ## Step 6: Users, Groups and Permissions
 
