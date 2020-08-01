@@ -1,7 +1,7 @@
 # MediaServer Notes
 
 ## Introduction
-In July, 2020, I used an old laptop with a busted screen to setup as a Linux media server to download and stream movies and TV episodes over my LAN to various wifi devices (laptops, tablets and smart TVs). Below are the notes of the various steps taken and software installed in order to achieve this.
+In July, 2020, I setup an old laptop with a busted screen as a Linux media server to download and stream movies and TV episodes over my LAN to various wifi devices (laptops, tablets and smart TVs). Below are the notes of the various steps taken and software installed in order to achieve this.
 
 The hardware specs of my old laptop are given below:
   1. Laptop Model: [SAMSUNG model: NP300E5X-U01IN](https://www.samsung.com/in/support/model/NP300E5X-U01IN/)
