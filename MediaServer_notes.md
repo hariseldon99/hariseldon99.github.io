@@ -121,9 +121,9 @@ Follow the instructions in the link below:
 
 [Turn Ubuntu desktop into an headless server](https://ubuntuusertips.wordpress.com/2014/02/19/turn-ubuntu-desktop-into-an-headless-server/)
 
-Then, maintain the internet connection, then auto-install the nvidia graphics drivers from the command line as per instructions given below
+Then, maintain the internet connection, then auto-install the nVidia graphics drivers from the command line as per instructions given below
 
-[2 Ways to Install Nvidia Driver on Ubuntu 18.04 (GUI & Command Line)](https://www.linuxbabe.com/ubuntu/install-nvidia-driver-ubuntu-18-04)
+[2 Ways to Install nVidia Driver on Ubuntu 18.04 (GUI & Command Line)](https://www.linuxbabe.com/ubuntu/install-nvidia-driver-ubuntu-18-04)
 
 Note that the kernel headers corresponding to the RUNNING KERNEL must be installed. This can be done with the command
 
@@ -160,10 +160,12 @@ Finally, I opted for RAM transcoding, where transcoded files are written to RAM 
  
  [How to Create and Use a Ramdisk on Ubuntu 18.04](https://linuxhint.com/ramdisk_ubuntu_1804/)
  
- I chose to mount it on the path '/var/lib/jellyfin/transcodes', and use the Jellyfin transcode settings page to point the transcoder to it (see screenshot below). The settings can be obtained by navigating in the Jellyfish Home page as follows: "Admin --> Dashboard --> Playback"
+ I chose to mount it on the path ['/dev/shm'](https://www.cyberciti.biz/files/linux-kernel/Documentation/filesystems/tmpfs.txt), and use the Jellyfin transcode settings page to point the transcoder to it (see screenshot below). The settings can be obtained by navigating in the Jellyfish Home page as follows: Navigation menu on the left + "Admin : Dashboard --> Playback --> Transcoding (top of the page)"
  
- <a href="https://ibb.co/Z6X3gDF"><img src="https://i.ibb.co/WW5QzJM/image.png" alt="image" border="0"></a>
+  <a href="https://ibb.co/27F6f46"><img src="https://i.ibb.co/Lz0P27P/image.png" alt="image" border="0"></a>
 
+  As can be seen in the screenshot above, the transcoder setting can be used to enable nVidia NEVC transcoding as described in the Jellyfin "Quick Start" page (linked above) on Hardware Acceleration.
+  
 ## Step 3: Install bittorrent client and indexers:
 
 1. Bittorrent client: I've chosen [transmission](https://transmissionbt.com/), but [deluge](https://deluge-torrent.org/) also has a web interface. Installing transmission without a GUI (headless) and running the web interface can be done as per the instructions below:
@@ -192,18 +194,40 @@ Finally, I opted for RAM transcoding, where transcoded files are written to RAM 
 
 ## Step 4: Automounting USB and Automatic DVD-Ripping
 
-https://github.com/raamsri/automount-usb
+Here, I wanted to setup the media server in such as way that inserting a USB thumb drive or external hard drive into the machine would automatically mount it without manual intervention. This way, I can remotely log in and just copy the files from the drives to wherever. The simplest way is to use Ubuntu's systemd to launch the automount service at boot, the service being [automount-usb](https://github.com/raamsri/automount-usb). Simply checkout the github repository and follow the instructions therein
+
+  ```console
+  $ git checkout https://github.com/raamsri/automount-usb
+  $ cd automount-usb
+  $ sudo ./CONFIGURE.sh
+  ```
+ In addition, I setup the system to automatically mount and rip any inserted DVD discs and copy the content files over to a separate folder in the Jellyfin media user space. To do that, I setup [Automatic Ripping Machine (ARM)](https://b3n.org/automatic-ripping-machine/). Just check out the [relevant GitHub page](https://github.com/automatic-ripping-machine/automatic-ripping-machine) and follow the instructions therein.
+
 
 ## Step 5: Setup unified interface using Organizr and EasyServerMonitor:
+Phew! That was a lot of installations and configs! Now, the media server has a lot of web services running in all sorts of ports, with more possibly in the future. How does one keep track of it all? Bookmarks in the browser? UGH! What about checking up on server status? Do we just keep ssh-ing periodically? How crude!
 
-https://smarthomepursuits.com/install-organizr-v2-windows/
+An excellent software for keeping all your media services together for easy viewing and configuration is called ["Organizr"](https://organizr.app/). It sets up a web login using PHP on an standard web server where you can keep all your media service links in one place and see a status dashboard to boot! Head on over to [their documentation](https://docs.organizr.app/) and follow the installation instructions. Alternatively, see the following article (adjust for your operating system)
 
-https://websiteforstudents.com/setup-lighttpd-web-server-with-php-supports-on-ubuntu-servers/
+  [The Ultimate Organizr V2 Setup Guide for Windows](https://smarthomepursuits.com/install-organizr-v2-windows/)
 
+The setup instructions can be a bit confusing, so I summarize below.
 
+  1. First, setup an http web server with php hooks enabled. I chose the lightweight ['lighttpd'](https://www.lighttpd.net/) server due to its speed and small footprint, but more standard ones like [Apache](https://httpd.apache.org/) or [Nginx](https://www.nginx.com/) can also be used. See this HOWTO on setting up lighttpd with PHP enabled:
+  
+   [Setup Lighttpd Web Server with PHP Supports on Ubuntu Servers](https://websiteforstudents.com/setup-lighttpd-web-server-with-php-supports-on-ubuntu-servers/)
+
+  2. Next, Clone/Download the GitHub page of [OrganizrInstaller](https://github.com/elmerfdz/OrganizrInstaller), navigate to the folder for the ubuntu installer script, and launch it.
+     
+     ```console
+     $ git clone https://github.com/elmerfdz/OrganizrInstaller
+     $ cd OrganizrInstaller/ubuntu/oui
+     $ sudo bash ./ou_installer.sh
+     ```
+     
 ## Step 6: Users, Groups and Permissions
 
-Since all the different softwares installed above have to communicate content data to each other in disk, I thought it best to let them. To that end, each software creates a user and group with the same name as the software (this is done automatically). Set the working directories of each of the following software to permissions where the user and group gets to read, write and execute, and assign  the groups to each other. Consult standard linux documentation on how to do this. The following users/groups are important in this regard:
+Finally, since all the different softwares installed above often want to communicate content data to each other in disk, I thought it best to let them. To that end, each software creates a user and group with the same name as the software (this is done automatically). Set the working directories of each of the following software to permissions where the user and group gets to read, write and execute, and assign  the groups to each other. Consult standard linux documentation on how to do this. The following users/groups are important in this regard:
 
 1. Group: admin, Users: admin, jellyfin
 
@@ -242,8 +266,9 @@ Since all the different softwares installed above have to communicate content da
 11. MondoRescue : http://www.mondorescue.org
 
 ## Extras
+As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned media server installation CD that does a lot of what I've described above and more! Might want to check that out:
 
-https://www.turnkeylinux.org/mediaserver
+  [Turnkey Linux MediaServer: Simple Network Attached Media Storage](https://www.turnkeylinux.org/mediaserver)
 
 ## TODO:
 1. Look into usenet downloading.
