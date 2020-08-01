@@ -13,6 +13,8 @@ This is my github page. Below are links to codes and instructions related to my 
 
 5. [Website for CBCS workshop](https://sites.google.com/phys.buruniv.ac.in/programming-workshop-cbcs/) on Computational Methods for Undergraduate Lecturers, The University of Burdwan. 
 
+6. [MediaServer Setup](MediaServer_notes.md) - Notes on setting up my MediaServer.
+
 ## Codes and Packages:
 
 1. [hariseldon99/ising_exact](https://github.com/hariseldon99/ising_exact) : Exact dynamics of ising systems.
