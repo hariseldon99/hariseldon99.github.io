@@ -241,8 +241,14 @@ Finally, since all the different softwares installed above often want to communi
 
 6. Group: jellyfin, Users: admin,debian-transmission,radarr,sonarr,jackett
 
+## Final Step: Client software
+Finally, of course, we'll need clients to connect and stream from the Jellyfin server. The clients page of the Jellyfin website has a lot of information on this:
 
-## Software Installed with heavy manual config:
+[Jellyfin Clients](https://jellyfin.org/clients/)
+
+Clients exist for several operating systems and smart media devices ranging from Android TVs to Amazon Fire-TV. If none of them work, then enable the [DLNA server in Jellyfish](https://jellyfin.org/docs/general/networking/dlna.html) in the Media Server and use any DLNA-compatible video player in your device to detect and connect to it. Many such players exist for all sorts of operating systems. A good Open Source one is [VLC](https://www.videolan.org/), also supported on [Android and Amazon Fire TV](https://www.videolan.org/vlc/download-android.html).
+
+## List of Software Installed with heavy manual config:
 1.  Jellyfin media server : https://jellyfin.org
 
 2.  Radarr : https://radarr.video
