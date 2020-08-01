@@ -144,20 +144,25 @@ Install Jellyfin as per instructions here:
 
 [Jellyfin Quick Start: Installing on Ubuntu](https://jellyfin.org/docs/general/administration/installing.html#ubuntu)
 
-Then enable hardware transcoding nVidia NVENC/NVDEC and the version of FFMPEG bundled with Jellyfin. Instructions are below.
+Then enable hardware transcoding with [nVidia NVENC/NVDEC](https://developer.nvidia.com/nvidia-video-codec-sdk) and the version of FFMPEG bundled with Jellyfin. Instructions are below.
 
 [Jellyfin Quick Start: Hardware Acceleration](https://jellyfin.org/docs/general/administration/hardware-acceleration.html)
 
+**Note:** Even without an nVidia card, hardware transcoding is possible in standard Intel graphics cards using the open source [VAAPI](https://www.freedesktop.org/wiki/Software/vaapi/) libraries. For instructions on how to get Jellyfin to do it, see the HOWTO below:
 
-Finally, I opted for RAM transcoding, where transcoded files are written to RAM instead of disk for faster access. For background, checkout the youtube video below (this one is for plex, but the principle is the same for all streaming servers)
+[Jellyfin Quick Start: Hardware Acceleration using VAAPI](https://jellyfin.org/docs/general/administration/hardware-acceleration.html#configuring-vaapi-acceleration-on-debianubuntu-from-deb-packages)
 
-   [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/F_Pc_4SahWg/0.jpg)](https://www.youtube.com/watch?v=F_Pc_4SahWg)
+Finally, I opted for RAM transcoding, where transcoded files are written to RAM instead of disk for faster access. For background, checkout the youtube video below (this one is for Plex, but the principle is the same for all streaming servers)
+
+   [![5 Ways to optimize your Plex Media Server](https://img.youtube.com/vi/F_Pc_4SahWg/0.jpg)](https://www.youtube.com/watch?v=F_Pc_4SahWg)
    
  To create a ramdisk and mount it on ubuntu, follow this HOWTO:
  
  [How to Create and Use a Ramdisk on Ubuntu 18.04](https://linuxhint.com/ramdisk_ubuntu_1804/)
  
- I chose to mount it on the path '/var/lib/jellyfin/transcodes', and use the Jellyfin transcode settings page to point the transcoder to it (see screenshot below)
+ I chose to mount it on the path '/var/lib/jellyfin/transcodes', and use the Jellyfin transcode settings page to point the transcoder to it (see screenshot below). The settings can be obtained by navigating in the Jellyfish Home page as follows: "Admin --> Dashboard --> Playback"
+ 
+ <a href="https://ibb.co/Z6X3gDF"><img src="https://i.ibb.co/WW5QzJM/image.png" alt="image" border="0"></a>
 
 ## Step 3: Install bittorrent client and indexers:
 
@@ -173,55 +178,74 @@ Finally, I opted for RAM transcoding, where transcoded files are written to RAM 
   
    Note that you will have to setup supported online indexers for bittorrent. There are only a few for Radarr and Sonarr, and they don't always work well. Therefore, I also installed the Jackett proxy server which connects to thousands of online indexers and configured radarr and sonarr to use Jackett instead. For instructions, checkout the [GitHub page for jackett](https://github.com/Jackett/Jackett).
  
- For further details, checkout these HOWTOs:
+  For further details, checkout these HOWTOs:
  
-  * [How to use Jackett with Sonarr](https://community.seedboxes.cc/articles/how-to-use-jackett-with-sonarr)
+   * [How to use Jackett with Sonarr](https://community.seedboxes.cc/articles/how-to-use-jackett-with-sonarr)
   
-  * [Sonarr – How to add good Public Indexers](https://tricksty.com/tricks/sonarr-how-to-add-good-public-indexers)
+   * [Sonarr – How to add good Public Indexers](https://tricksty.com/tricks/sonarr-how-to-add-good-public-indexers)
   
-  * [Installing Radarr, Sonarr and Deluge on your Unraid Server](https://blog.harveydelaney.com/installing-radarr-sonar-and-deluge-on-your-unraid-setup/)
+   * [Installing Radarr, Sonarr and Deluge on your Unraid Server](https://blog.harveydelaney.com/installing-radarr-sonar-and-deluge-on-your-unraid-setup/)
 
-3. Finally, in order to keep the Transmission client download list from bloating, I used this HOWTO to automatically remove completed doanloads from transmission:
+3. Finally, in order to keep the Transmission client download list from bloating, I used this HOWTO to automatically remove completed downloads from transmission:
 
-  [Guide : Auto removal of downloads from transmission 2.82](https://community.wd.com/t/guide-auto-removal-of-downloads-from-transmission-2-82/93156)
+    [Guide : Auto removal of downloads from transmission 2.82](https://community.wd.com/t/guide-auto-removal-of-downloads-from-transmission-2-82/93156)
 
-## Stuff Installed with heavy manual config:
+## Step 4: Automounting USB and Automatic DVD-Ripping
+
+https://github.com/raamsri/automount-usb
+
+## Step 5: Setup unified interface using Organizr and EasyServerMonitor:
+
+https://smarthomepursuits.com/install-organizr-v2-windows/
+
+https://websiteforstudents.com/setup-lighttpd-web-server-with-php-supports-on-ubuntu-servers/
+
+
+## Step 6: Users, Groups and Permissions
+
+Since all the different softwares installed above have to communicate content data to each other in disk, I thought it best to let them. To that end, each software creates a user and group with the same name as the software (this is done automatically). Set the working directories of each of the following software to permissions where the user and group gets to read, write and execute, and assign  the groups to each other. Consult standard linux documentation on how to do this. The following users/groups are important in this regard:
+
+1. Group: admin, Users: admin, jellyfin
+
+2. Group: debian-transmission, Users: sonarr,radarr,admin,jellyfin
+
+3. Group: radarr, Users: debian-transmission,sonarr,admin,jellyfin
+
+4. Group: sonarr, Users: debian-transmission,radarr,admin,jellyfin
+
+5. Group: jackett, Users: admin
+
+6. Group: jellyfin, Users: admin,debian-transmission,radarr,sonarr,jackett
+
+
+## Software Installed with heavy manual config:
 1.  Jellyfin media server : https://jellyfin.org
+
 2.  Radarr : https://radarr.video
+
 3.  Sonarr : https://sonarr.tv
+
 4.  Jackett : https://github.com/Jackett/Jackett
+
 5.  Transmission-daemon : https://transmissionbt.com/
+
 6.  Lighttpd + php (basic setup)
+
 7.  Organizr : https://organizr.app/
+
 8.  automount-usb : https://github.com/raamsri/automount-usb
+
 9.  eZServerMonitor : https://www.ezservermonitor.com/ (embedded as an iframe in organizr)
+
 10. automatic-ripping-machine : https://github.com/automatic-ripping-machine/automatic-ripping-machine  (Untested, user switched from arm to admin)
+
 11. MondoRescue : http://www.mondorescue.org
 
 ## Special system users/groups. All listed users belong to all listed groups and homedirs are writable to all
 
-1. sshd:x:123:65534::/run/sshd:/usr/sbin/nologin
-2. admin:x:1002:1002:ADMINISTRATOR,,,:/home/admin:/bin/bash
-3. debian-transmission:x:121:125::/var/lib/transmission-daemon:/usr/sbin/nologin
-4. radarr:x:998:998::/var/lib/radarr:/usr/sbin/nologin
-5. sonarr:x:111:1003::/var/lib/sonarr:/usr/sbin/nologin
-6. jackett:x:997:997::/var/lib/jackett:/usr/sbin/nologin
-7. jellyfin:x:122:128:Jellyfin default user,,,:/var/lib/jellyfin:/bin/false
-
-## HOWTOS:
-1.  https://tricksty.com/tricks/sonarr-how-to-add-good-public-indexers
-2.  https://www.loggly.com/ultimate-guide/linux-logging-with-systemd/
-3.  https://www.golinuxcloud.com/systemd-journald-how-logging-works-rhel-7/
-4.  https://websiteforstudents.com/setup-lighttpd-web-server-with-php-supports-on-ubuntu-servers/
-5.  https://community.wd.com/t/guide-auto-removal-of-downloads-from-transmission-2-82/93156
-6.  https://smarthomepursuits.com/install-organizr-v2-windows/
-7.  https://linuxhint.com/ramdisk_ubuntu_1804/ (for RAM transcoding)
-8.  https://jellyfin.org/docs/general/administration/hardware-acceleration.html
 
 ## TODO:
 1. Look into usenet downloading.
 2. Look into WAN access via openvpn. Don't forward any ports from WAN to LAN (other than bittorrent) - UPDATE: Not connecting as of 20200728. Try after some time...
 3. Integrate Radarr and Sonarr with trakt.tv (Google for this).
 4. Config mondorescue to backup to iso (http://www.mondorescue.org/docs.shtml)
-
-## Notes:
