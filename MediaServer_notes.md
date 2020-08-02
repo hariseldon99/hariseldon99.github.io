@@ -282,7 +282,7 @@ Clients exist for several operating systems and smart media devices ranging from
 
 5.  Transmission-daemon : https://transmissionbt.com/
 
-6.  Lighttpd + php (basic setup)
+6.  Lighttpd + php (basic setup) : https://websiteforstudents.com/setup-lighttpd-web-server-with-php-supports-on-ubuntu-servers/
 
 7.  Organizr : https://organizr.app/
 
