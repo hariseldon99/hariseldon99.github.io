@@ -140,17 +140,27 @@ See this HOWTO:
 ## Step 2: Install a Media Streaming System:
 There are several media streaming servers for Linux, the most popular ones (as of 2020), being [Plex](https://www.plex.tv/) and [Emby](https://emby.media/). I tried both of them. However, Plex was beset with networking difficulties, and [disallowed hardware transcoding unless you paid for their premium service](https://support.plex.tv/articles/115002178853-using-hardware-accelerated-streaming/). Furthermore, the free version of Emby did practically nothing, and you had to pay premium for using any client on a smart TV. Thus, I settled for the open source fork of Emby, called [Jellyfin media server](https://jellyfin.org).
 
+### Install Jellyfin
 Install Jellyfin as per instructions here:
 
 [Jellyfin Quick Start: Installing on Ubuntu](https://jellyfin.org/docs/general/administration/installing.html#ubuntu)
 
-Then enable hardware transcoding with [nVidia NVENC/NVDEC](https://developer.nvidia.com/nvidia-video-codec-sdk) and the version of FFMPEG bundled with Jellyfin. Instructions are below.
+### Hardware Transcoding with nVidia GPUs
+
+If you have an nVidia graphics card that supports hardware transcoding (research your model, mine does not), then enable hardware transcoding with [nVidia NVENC/NVDEC](https://developer.nvidia.com/nvidia-video-codec-sdk) and the version of FFMPEG bundled with Jellyfin. Instructions are below.
 
 [Jellyfin Quick Start: Hardware Acceleration](https://jellyfin.org/docs/general/administration/hardware-acceleration.html)
 
-**Note:** Even without an nVidia card, hardware transcoding is possible in standard Intel graphics cards using the open source [VAAPI](https://www.freedesktop.org/wiki/Software/vaapi/) libraries. For instructions on how to get Jellyfin to do it, see the HOWTO below:
+### Hardware transcoding to intel GPU
+Turns out that my M-series nVidia GPU **does not support hardware transcoding**. Nonetheless, hardware transcoding is possible in standard Intel graphics cards using the open source [VAAPI](https://www.freedesktop.org/wiki/Software/vaapi/) libraries. For instructions on how to get Jellyfin to do it, see the HOWTO below:
 
 [Jellyfin Quick Start: Hardware Acceleration using VAAPI](https://jellyfin.org/docs/general/administration/hardware-acceleration.html#configuring-vaapi-acceleration-on-debianubuntu-from-deb-packages)
+
+Usually, once the intel graphics drivers are up and running, Jellyfish can automatically choose the codecs that are supported by the GPU once VAAPI is enabled in the "Transcoding" configuration page (see the subsection below on where to find it). In any case, if you need to know which codecs are supported for your card, then go through the HOWTO cited below:
+
+[archlinux wiki: Hardware Video Acceleration](https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Verifying_VA-API)
+
+### RAM Transcoding
 
 Finally, I opted for RAM transcoding, where transcoded files are written to RAM instead of disk for faster access. For background, checkout the youtube video below (this one is for Plex, but the principle is the same for all streaming servers)
 
@@ -162,9 +172,9 @@ Finally, I opted for RAM transcoding, where transcoded files are written to RAM 
  
  I chose to mount it on the path ['/dev/shm'](https://www.cyberciti.biz/files/linux-kernel/Documentation/filesystems/tmpfs.txt), and use the Jellyfin transcode settings page to point the transcoder to it (see screenshot below). The settings can be obtained by navigating in the Jellyfish Home page as follows: Navigation menu on the left + "Admin : Dashboard --> Playback --> Transcoding (top of the page)"
  
-  <a href="https://ibb.co/27F6f46"><img src="https://i.ibb.co/Lz0P27P/image.png" alt="image" border="0"></a>
+  <a href="https://ibb.co/tCbXXLC"><img src="https://i.ibb.co/q1R55J1/image.png" alt="image" border="0"></a>
 
-  As can be seen in the screenshot above, the transcoder setting can be used to enable nVidia NEVC transcoding as described in the Jellyfin "Quick Start" page (linked above) on Hardware Acceleration.
+  As can be seen in the screenshot above, the transcoder setting can be used to enable VAAPI transcoding as described in the Jellyfin "Quick Start" page (linked above) on Hardware Acceleration.
   
 ## Step 3: Install bittorrent client and indexers:
 
