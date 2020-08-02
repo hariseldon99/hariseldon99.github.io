@@ -304,3 +304,4 @@ As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned med
 2. Integrate Radarr and Sonarr with trakt.tv (Google for this).
 3. Config mondorescue to backup to iso (http://www.mondorescue.org/docs.shtml)
 4. Acces files in the server via WEBDAV: (https://danrohde.github.io/webdavcgi/)
+5. Switch from eZServerMonitor to the more sophisticated netdata (supported by organizr): [WEBPAGE](https://www.netdata.cloud/), HOWTO - [How to Set Up Real-Time Performance Monitoring with Netdata on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-real-time-performance-monitoring-with-netdata-on-ubuntu-16-04)
