@@ -151,14 +151,21 @@ If you have an nVidia graphics card that supports hardware transcoding (research
 
 [Jellyfin Quick Start: Hardware Acceleration](https://jellyfin.org/docs/general/administration/hardware-acceleration.html)
 
-### Hardware transcoding to intel GPU
-Turns out that my M-series nVidia GPU **does not support hardware transcoding**. Nonetheless, hardware transcoding is possible in standard Intel graphics cards using the open source [VAAPI](https://www.freedesktop.org/wiki/Software/vaapi/) libraries. For instructions on how to get Jellyfin to do it, see the HOWTO below:
+### Hardware Transcoding with intel GPUs
+Turns out that my M-series nVidia GPU **does not support hardware transcoding**. I learnt this the hard way by trying the config in the previous subsection and failing. To check whether your hardware transcoding is working, check the logs in "/var/log/jellyfin". There are transcode logs named "ffmpeg-transcode-XXXXXX" where "XXXXX" is some sort of hash. Go ahead and grep through them or just open them up in a text editor or whatever. See [this section](https://jellyfin.org/docs/general/administration/hardware-acceleration.html#verifying-transcodes) in the HOWTO cited in the previous subsection of this doc for details.
+
+Nonetheless, hardware transcoding is possible in standard Intel graphics cards using the open source [VAAPI](https://www.freedesktop.org/wiki/Software/vaapi/) libraries. For instructions on how to get Jellyfin to do it, see the HOWTO below:
 
 [Jellyfin Quick Start: Hardware Acceleration using VAAPI](https://jellyfin.org/docs/general/administration/hardware-acceleration.html#configuring-vaapi-acceleration-on-debianubuntu-from-deb-packages)
 
 Usually, once the intel graphics drivers are up and running, Jellyfish can automatically choose the codecs that are supported by the GPU once VAAPI is enabled in the "Transcoding" configuration page (see the subsection below on where to find it). In any case, if you need to know which codecs are supported for your card, then go through the HOWTO cited below:
 
 [archlinux wiki: Hardware Video Acceleration](https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Verifying_VA-API)
+
+### Hardware Transcoding: Multiple GPU systems
+If, like me, you have multiple graphics cards with one of them being an [nVidia optimus-](https://www.nvidia.com/en-us/geforce/technologies/optimus/)compatible gpu, you may install the nVidia graphics drivers the standard way and use [PRIME profiles](https://wiki.archlinux.org/index.php/PRIME) to switch them around. See the HOWTO in the link below for a simple introduction:
+
+[LinuxBabe: How To Switch Between Intel and Nvidia Graphics Card on Ubuntu](https://www.linuxbabe.com/desktop-linux/switch-intel-nvidia-graphics-card-ubuntu)
 
 ### RAM Transcoding
 
