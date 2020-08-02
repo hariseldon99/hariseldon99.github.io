@@ -232,7 +232,7 @@ The setup instructions can be a bit confusing, so I summarize below.
 
   1. First, setup an http web server with php hooks enabled. I chose the lightweight ['lighttpd'](https://www.lighttpd.net/) server due to its speed and small footprint, but more standard ones like [Apache](https://httpd.apache.org/) or [Nginx](https://www.nginx.com/) can also be used. See this HOWTO on setting up lighttpd with PHP enabled:
   
-   [Setup Lighttpd Web Server with PHP Supports on Ubuntu Servers](https://websiteforstudents.com/setup-lighttpd-web-server-with-php-supports-on-ubuntu-servers/)
+      [Setup Lighttpd Web Server with PHP Supports on Ubuntu Servers](https://websiteforstudents.com/setup-lighttpd-web-server-with-php-supports-on-ubuntu-servers/)
 
   2. Next, Clone/Download the GitHub page of [OrganizrInstaller](https://github.com/elmerfdz/OrganizrInstaller), navigate to the folder for the ubuntu installer script, and launch it.
      
@@ -243,9 +243,9 @@ The setup instructions can be a bit confusing, so I summarize below.
      ```
   3. Finally, an interesting trick can be to run a simple PHP-web based system monitor and enbed the output on your organizr home page. I chose [eZServerMonitor](https://www.ezservermonitor.com/) due to its simplicity and low footprint. Install it in a subdirectory of your organizr install, then open Organizr page in your browser, go to 'settings -> Tab Editor -> Homepage Items -> CUSTOMHEML-1' and input the following html markup tag 
   
-  ```html
-   <iframe src="http://192.168.1.2/apps/ezservermonitor/index.php" name="System Monitor" height="1400px" width="100%" title="System Monitor"></iframe>
-  ```
+    ```html
+    <iframe src="http://192.168.1.2/apps/ezservermonitor/index.php" name="System Monitor" height="1400px" width="100%" title="System Monitor"></iframe>
+    ```
   Once this is saved and enabled, the Organizr homepage should show a nice big embedded frame with all your machine status information in it.
      
 ## Step 6: Users, Groups and Permissions
