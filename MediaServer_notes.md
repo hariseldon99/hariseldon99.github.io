@@ -300,7 +300,7 @@ As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned med
   [Turnkey Linux MediaServer: Simple Network Attached Media Storage](https://www.turnkeylinux.org/mediaserver)
 
 ## TODO:
-1. Look into usenet downloading.
-2. Look into WAN access via openvpn. Don't forward any ports from WAN to LAN (other than bittorrent) - UPDATE: Not connecting as of 20200728. Try after some time...
-3. Integrate Radarr and Sonarr with trakt.tv (Google for this).
-4. Config mondorescue to backup to iso (http://www.mondorescue.org/docs.shtml)
+1. Look into WAN access via openvpn. Don't forward any ports from WAN to LAN (other than bittorrent)
+2. Integrate Radarr and Sonarr with trakt.tv (Google for this).
+3. Config mondorescue to backup to iso (http://www.mondorescue.org/docs.shtml)
+4. Acces files in the server via WEBDAV: (https://danrohde.github.io/webdavcgi/)
