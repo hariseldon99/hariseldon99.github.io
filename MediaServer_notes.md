@@ -294,6 +294,19 @@ Clients exist for several operating systems and smart media devices ranging from
 
 11. MondoRescue : http://www.mondorescue.org
 
+## Maintenance
+
+It goes without saying that this machine is running 24/7. Laptops are generally not designed for continuous running and the cpu can run fairly hot. It is important to manage this as well as possible. The best way is to install fan control software that adjusts the speed of the cpu fan to maximize cooling. There are numerous software for this on linux (google for them). The standard [lm-sensors](https://github.com/lm-sensors/lm-sensors) tool does not detect my cpu fan no matter what. Thus, I have chosen to try "[samsung-tools](https://loms.voria.org/viewtopic.php?p=5798#p5798)", a general toolkit designed for samsung laptops using the .
+
+Samsung-tools for linux can set the fan speed to 'overclock' mode, where the fan presumably cools more aggressively. However, the setting seems to be non-persistent, meaning it disappears after a reboot. Therefore, I've setup an [hourly user-level cron job](https://help.ubuntu.com/community/CronHowto) to set it to overclock mode. This should, in principle, maximize cooling. The software can be installed on ubuntu from the PPA given below:
+
+[Linux On My Samsung](https://launchpad.net/~voria/+archive/ubuntu/ppa)
+
+Simply run
+  ```console
+  $ sudo add-apt-repository ppa:voria/ppa && apt install samsung-tools
+  ```
+
 ## Extras
 As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned media server installation CD that does a lot of what I've described above and more! Might want to check that out:
 
@@ -303,5 +316,5 @@ As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned med
 1. Look into WAN access via openvpn. Don't forward any ports from WAN to LAN (other than bittorrent)
 2. Integrate Radarr and Sonarr with trakt.tv (Google for this).
 3. Config mondorescue to backup to iso (http://www.mondorescue.org/docs.shtml)
-4. Acces files in the server via WEBDAV: (https://danrohde.github.io/webdavcgi/)
-5. Switch from eZServerMonitor to the more sophisticated netdata (supported by organizr): [WEBPAGE](https://www.netdata.cloud/), HOWTO - [How to Set Up Real-Time Performance Monitoring with Netdata on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-real-time-performance-monitoring-with-netdata-on-ubuntu-16-04)
+4. Access files in the server via WEBDAV: (https://danrohde.github.io/webdavcgi/)
+5. Look into better CPU fan control with [NBFC](https://github.com/hirschmann/nbfc)
