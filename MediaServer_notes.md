@@ -117,11 +117,16 @@ To these ends, I stripped down my Ubuntu installation from standard to barebones
 
 ## Step 1: Make Ubuntu headless
 
-Follow the instructions in the link below:
+
+First, I made my existing ubuntu install [headless](https://smallbusiness.chron.com/headless-linux-33715.html) so that it runs in console mode without graphics. Strictly speaking, this is not necessary, but I believe that not running unnecessary graphics will free up some cpu and RAM for streaming, and have extra HDD space for media.
+
+To make an existing ubuntu headless, follow the instructions in the link below:
 
 [Turn Ubuntu desktop into an headless server](https://ubuntuusertips.wordpress.com/2014/02/19/turn-ubuntu-desktop-into-an-headless-server/)
 
-Then, maintain the internet connection, then auto-install the nVidia graphics drivers from the command line as per instructions given below
+For a fresh install, I suspect that the [ubuntu MinimalCD](https://help.ubuntu.com/community/Installation/MinimalCD) is the best option. Simply boot off it and install only basic packages and internet-wifi connection stuff, no graphics or X11/wayland needed at this juncture.
+
+Then, maintain the internet connection and auto-install the nVidia graphics drivers from the command line as per instructions given below
 
 [2 Ways to Install nVidia Driver on Ubuntu 18.04 (GUI & Command Line)](https://www.linuxbabe.com/ubuntu/install-nvidia-driver-ubuntu-18-04)
 
