@@ -93,6 +93,403 @@ The hardware specs of my old laptop are given below:
     printf " * USB Drives :    USB drives are automatically detected and mounted\n"
 ```
 
+ 5. The hardware specs of this old laptop are hard to find. A detailed datasheet has been obtained from [icecat](https://icecat.lu/). It is referred below:
+ 
+    [icecat: Datasheet for Samsung NP300E5X Notebook](https://icecat.lu/amp/p/vendorName/mpn/desc-19418433.html). In case the [link rots](https://www.nngroup.com/articles/fighting-linkrot/), parts of the datasheet table (as of Aug 4, 2020), is reproduced below:
+
+<details><summary>CLICK HERE</summary> <p>
+
+  <table>
+    <tr>
+        <td>
+                                                Processor                                            </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Processor manufacturer                                                </td>
+        <td>
+                                                    Intel                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Processor model                                                </td>
+        <td>
+                                                    i3-2310M                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Processor frequency                                                </td>
+        <td>
+                                                    2.1 GHz                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Processor family                                                </td>
+        <td>
+                                                    2nd gen Intel® Core™ i3                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Processor cores                                                </td>
+        <td>
+                                                    2                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Processor threads                                                </td>
+        <td>
+                                                    4                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    System bus rate                                                </td>
+        <td>
+                                                    5 GT/s                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Processor cache                                                </td>
+        <td>
+                                                    3 MB                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Processor cache type                                                </td>
+        <td>
+                                                    Smart Cache                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Processor socket                                                </td>
+        <td>
+                                                    BGA 1023                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Processor lithography                                                </td>
+        <td>
+                                                    32 nm                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Processor operating modes                                                </td>
+        <td>
+                                                    64-bit                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Processor series                                                </td>
+        <td>
+                                                    Intel Core i3-2300 Mobile series                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Processor codename                                                </td>
+        <td>
+                                                    Sandy Bridge                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Bus type                                                </td>
+        <td>
+                                                    DMI                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    FSB Parity                                                </td>
+        <td>                                        NO
+                                                                                                    </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Stepping                                                </td>
+        <td>
+                                                    J1                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Motherboard chipset                                                </td>
+        <td>
+                                                    Intel® HM75 Express                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Thermal Design Power (TDP)                                                </td>
+        <td>
+                                                    35 W                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Tjunction                                                </td>
+        <td>
+                                                    100 °C                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Maximum number of PCI Express lanes                                                </td>
+        <td>
+                                                    1                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    PCI Express slots version                                                </td>
+        <td>
+                                                    2.0                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    PCI Express configurations                                                </td>
+        <td>
+                                                    1x16,2x8,1x8+2x4                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    CPU multiplier (bus/core ratio)                                                </td>
+        <td>
+                                                    21                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    ECC supported by processor                                                </td>
+        <td>                                        No
+                                                                                                    </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>
+                                                Memory                                            </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Internal memory                                                </td>
+        <td>
+                                                    4 GB                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Internal memory type                                                </td>
+        <td>
+                                                    DDR3-SDRAM                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Memory clock speed                                                </td>
+        <td>
+                                                    1333 MHz                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Memory form factor                                                </td>
+        <td>
+                                                    SO-DIMM                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Memory layout (slots x size)                                                </td>
+        <td>
+                                                    1 x 4 GB                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Memory slots                                                </td>
+        <td>
+                                                    2x SO-DIMM                                                </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>
+                                                Storage                                            </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Total storage capacity                                                </td>
+        <td>
+                                                    500 GB                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Storage media                                                </td>
+        <td>
+                                                    HDD                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Number of HDDs installed                                                </td>
+        <td>
+                                                    1                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    HDD capacity                                                </td>
+        <td>
+                                                    500 GB                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    HDD interface                                                </td>
+        <td>
+                                                    SATA II                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    HDD speed                                                </td>
+        <td>
+                                                    5400 RPM                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Optical drive type                                                </td>
+        <td>
+                                                    DVD Super Multi DL                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Card reader integrated                                                </td>
+        <td>
+                                                                                                    </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Compatible memory cards                                                </td>
+        <td>
+                                                    SD,SDHC,SDXC                                                </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>
+                                                Graphics                                            </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Discrete graphics adapter model                                                </td>
+        <td>
+                                                    NVIDIA® GeForce® GT 620M                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    On-board graphics adapter                                                </td>
+        <td>
+                                                                                                    </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Discrete graphics adapter                                                </td>
+        <td>
+                                                                                                    </td>
+    </tr>
+    <tr>
+        <td>
+                                                    On-board graphics adapter family                                                </td>
+        <td>
+                                                    Intel® HD Graphics                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    On-board graphics adapter model                                                </td>
+        <td>
+                                                    Intel® HD Graphics 3000                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    On-board graphics adapter base frequency                                                </td>
+        <td>
+                                                    650 MHz                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    On-board graphics adapter dynamic frequency (max)                                                </td>
+        <td>
+                                                    1100 MHz                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    On-board graphics adapter ID                                                </td>
+        <td>
+                                                    0x116                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Discrete graphics memory type                                                </td>
+        <td>
+                                                    GDDR3                                                </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <td>
+                                                Network                                            </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Wi-Fi                                                </td>
+        <td>
+                                                                                                    </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Bluetooth                                                </td>
+        <td>
+                                                                                                    </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Wi-Fi standards                                                </td>
+        <td>
+                                                    802.11b,802.11g,Wi-Fi 4 (802.11n)                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Ethernet LAN                                                </td>
+        <td>
+                                                                                                    </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Ethernet LAN data rates                                                </td>
+        <td>
+                                                    10,100,1000 Mbit/s                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Bluetooth version                                                </td>
+        <td>
+                                                    4.0                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Data network                                                </td>
+        <td>
+                                                    Not supported                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Cabling technology                                                </td>
+        <td>
+                                                    10/100/1000Base-T(X)                                                </td>
+    </tr>
+    <tr>
+        <td>
+                                                    4G WiMAX                                                </td>
+        <td>
+                                                                                                    </td>
+    </tr>
+    <tr>
+        <td>
+                                                    Networking standards                                                </td>
+        <td>
+                                                    IEEE 802.11b,IEEE 802.11g,IEEE 802.11n                                                </td>
+    </tr>
+</table>
+
+
+</p> </details>
+
 
 The key functions required of my home media server are as follows:
 
