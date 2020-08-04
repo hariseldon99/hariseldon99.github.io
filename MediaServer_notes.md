@@ -727,6 +727,14 @@ Simply run
   $ sudo add-apt-repository ppa:voria/ppa && apt install samsung-tools
   ```
 
+Also, I thought it a good idea to downclock the CPU in order to minimize overheating. Doesn't seem to effect transcoding or streaming. Do this with [cpufrequtils](http://www.thinkwiki.org/wiki/How_to_use_cpufrequtils) as follows
+
+  ```console
+  $ sudo apt-get install cpufrequtils
+  $ echo 'GOVERNOR="powersave"' | sudo tee /etc/default/cpufrequtils
+  $ sudo systemctl disable ondemand
+  ```
+
 ## Extras
 As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned media server installation CD that does a lot of what I've described above and more! Might want to check that out:
 
@@ -738,4 +746,5 @@ As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned med
 3. Config mondorescue to backup to iso (http://www.mondorescue.org/docs.shtml)
 4. Access files in the server via WEBDAV: (https://danrohde.github.io/webdavcgi/)
 5. Look into better CPU fan control with [NBFC](https://github.com/hirschmann/nbfc). 
+
     **Update:** Samsung laptops not supported by NBFC. Requires [manual config](https://github.com/hirschmann/nbfc/wiki). Looks like quite a schlep.
