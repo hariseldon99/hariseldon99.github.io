@@ -646,7 +646,7 @@ Clients exist for several operating systems and smart media devices ranging from
 
 11. MondoRescue : http://www.mondorescue.org
 
-## Mism
+## Miscellaneous
 
 ### Content of /etc/issue:
   
