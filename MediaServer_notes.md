@@ -737,4 +737,5 @@ As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned med
 2. Integrate Radarr and Sonarr with trakt.tv (Google for this).
 3. Config mondorescue to backup to iso (http://www.mondorescue.org/docs.shtml)
 4. Access files in the server via WEBDAV: (https://danrohde.github.io/webdavcgi/)
-5. Look into better CPU fan control with [NBFC](https://github.com/hirschmann/nbfc)
+5. Look into better CPU fan control with [NBFC](https://github.com/hirschmann/nbfc). 
+    **Update:** Samsung laptops not supported by NBFC. Requires [manual config](https://github.com/hirschmann/nbfc/wiki). Looks like quite a schlep.
