@@ -3,7 +3,7 @@
 ## Introduction
 In July, 2020, I setup an old laptop with a busted screen as a Linux media server to download and stream movies and TV episodes over my LAN to various wifi devices (laptops, tablets and smart TVs). Below are the notes of the various steps taken and software installed in order to achieve this.
 
-The hardware specs of my old laptop are given below:
+The details of my old laptop and default setup are given below:
 
 1. Laptop Model: [SAMSUNG model: NP300E5X-U01IN](https://www.samsung.com/in/support/model/NP300E5X-U01IN/)
   
@@ -43,74 +43,8 @@ The hardware specs of my old laptop are given below:
 ```
 
 </details>
-  
-3. Content of /etc/issue:
-  
-<details>
-  
-  <summary> CLICK HERE</summary> 
-  
-  ```console
-    admin@MediaServer:~$ cat /etc/issue
-                .-.
-          .-'``(|||)
-       ,`\\ \\    `-`.               88                         88
-      /   \\ '``-.   `              88                         88
-    .-.  ,       `___:    88   88  88,888,  88   88  ,88888, 88888  88   88
-   (:::) :        ___     88   88  88   88  88   88  88   88  88    88   88
-    `-`  `       ,   :    88   88  88   88  88   88  88   88  88    88   88
-      \\   / ,..-`   ,     88   88  88   88  88   88  88   88  88    88   88
-       `./ /    .-.`      '88888'  '88888'  '88888'  88   88  '8888 '88888'
-          `-..-(   )
-                `-`
-
-  Welcome to \n \l
-
-  * Services :      Point any Web-Browser to http://\4{wlp2s0} for details
-  * DVD Ripping :   Insert the disk in the drive and it should be ripped automatically to the Jellyfish userspace
-  * USB Drives :    USB drives are automatically detected and mounted
- ```
-</details>
  
-4. Content of custom message during remote login by ssh
- 
- <details>
-  
-  <summary> CLICK HERE </summary>
-  
- ```console
-    admin@MediaServer:~$ cat /etc/update-motd.d/01-mediaserver-info 
-    #!/bin/bash
-    #
-    #    01-mediaserver-info - print some info about the mediaserver
-    #
-    #    Authors: Analabha Roy <daneel@utexas.edu>
-    #
-    #    This program is free software; you can redistribute it and/or modify
-    #    it under the terms of the GNU General Public License as published by
-    #    the Free Software Foundation; either version 2 of the License, or
-    #    (at your option) any later version.
-    #
-    #    This program is distributed in the hope that it will be useful,
-    #    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    #    GNU General Public License for more details.
-    #
-    #    You should have received a copy of the GNU General Public License along
-    #    with this program; if not, write to the Free Software Foundation, Inc.,
-    #    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
-
-
-    IP_ADDRESS=`/sbin/ifconfig  | grep 'inet '| grep -v '127.0.0.1'|awk '{print $2}'`
-
-    printf "\n"
-    printf " * Services :      Point any Web-Browser to http://"$IP_ADDRESS" for details\n"
-    printf " * DVD Ripping :   Insert the disk in the drive and it should be ripped automatically to the Jellyfin userspace\n"
-    printf " * USB Drives :    USB drives are automatically detected and mounted\n"
-```
-</details>
- 
-5. The hardware specs of this old laptop are hard to find. A detailed datasheet has been obtained from [icecat](https://icecat.lu/). It is referred below:
+3. Detailed hardware specs of this old laptop are hard to find. A detailed datasheet has been obtained from [icecat](https://icecat.lu/). It is referred below:
  
       [icecat: Datasheet for Samsung NP300E5X Notebook](https://icecat.lu/amp/p/vendorName/mpn/desc-19418433.html). 
     
@@ -507,7 +441,7 @@ The hardware specs of my old laptop are given below:
 </table>
 </p> </details>
 
-The key functions required of my home media server are as follows:
+The key requirements of my home media server are as follows:
 
   1. That it have a [DLNA](https://windowsreport.com/dlna-servers/) and web-based streaming service for hosting downloaded content on the LAN
   
@@ -712,7 +646,75 @@ Clients exist for several operating systems and smart media devices ranging from
 
 11. MondoRescue : http://www.mondorescue.org
 
-## Maintenance
+## Mism
+
+### Content of /etc/issue:
+  
+<details>
+  
+  <summary> CLICK HERE</summary> 
+  
+  ```console
+    admin@MediaServer:~$ cat /etc/issue
+                .-.
+          .-'``(|||)
+       ,`\\ \\    `-`.               88                         88
+      /   \\ '``-.   `              88                         88
+    .-.  ,       `___:    88   88  88,888,  88   88  ,88888, 88888  88   88
+   (:::) :        ___     88   88  88   88  88   88  88   88  88    88   88
+    `-`  `       ,   :    88   88  88   88  88   88  88   88  88    88   88
+      \\   / ,..-`   ,     88   88  88   88  88   88  88   88  88    88   88
+       `./ /    .-.`      '88888'  '88888'  '88888'  88   88  '8888 '88888'
+          `-..-(   )
+                `-`
+
+  Welcome to \n \l
+
+  * Services :      Point any Web-Browser to http://\4{wlp2s0} for details
+  * DVD Ripping :   Insert the disk in the drive and it should be ripped automatically to the Jellyfish userspace
+  * USB Drives :    USB drives are automatically detected and mounted
+ ```
+</details>
+ 
+### Content of custom message during remote login
+ 
+ <details>
+  
+  <summary> CLICK HERE </summary>
+  
+ ```console
+    admin@MediaServer:~$ cat /etc/update-motd.d/01-mediaserver-info 
+    #!/bin/bash
+    #
+    #    01-mediaserver-info - print some info about the mediaserver
+    #
+    #    Authors: Analabha Roy <daneel@utexas.edu>
+    #
+    #    This program is free software; you can redistribute it and/or modify
+    #    it under the terms of the GNU General Public License as published by
+    #    the Free Software Foundation; either version 2 of the License, or
+    #    (at your option) any later version.
+    #
+    #    This program is distributed in the hope that it will be useful,
+    #    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    #    GNU General Public License for more details.
+    #
+    #    You should have received a copy of the GNU General Public License along
+    #    with this program; if not, write to the Free Software Foundation, Inc.,
+    #    51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+
+    IP_ADDRESS=`/sbin/ifconfig  | grep 'inet '| grep -v '127.0.0.1'|awk '{print $2}'`
+
+    printf "\n"
+    printf " * Services :      Point any Web-Browser to http://"$IP_ADDRESS" for details\n"
+    printf " * DVD Ripping :   Insert the disk in the drive and it should be ripped automatically to the Jellyfin userspace\n"
+    printf " * USB Drives :    USB drives are automatically detected and mounted\n"
+```
+</details>
+
+### Maintenance
 
 It goes without saying that this machine is running 24/7. Laptops are generally not designed for continuous running and the cpu can run fairly hot. It is important to manage this as well as possible. The best way is to install fan control software that adjusts the speed of the cpu fan to maximize cooling. There are numerous software for this on linux (google for them). The standard [lm-sensors](https://github.com/lm-sensors/lm-sensors) tool does not detect my cpu fan no matter what. Thus, I have chosen to try "[samsung-tools](https://loms.voria.org/viewtopic.php?p=5798#p5798)", a general toolkit designed for samsung laptops using the .
 
