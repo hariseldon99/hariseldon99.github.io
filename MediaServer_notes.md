@@ -4,9 +4,10 @@
 In July, 2020, I setup an old laptop with a busted screen as a Linux media server to download and stream movies and TV episodes over my LAN to various wifi devices (laptops, tablets and smart TVs). Below are the notes of the various steps taken and software installed in order to achieve this.
 
 The hardware specs of my old laptop are given below:
-  1. Laptop Model: [SAMSUNG model: NP300E5X-U01IN](https://www.samsung.com/in/support/model/NP300E5X-U01IN/)
+
+1. Laptop Model: [SAMSUNG model: NP300E5X-U01IN](https://www.samsung.com/in/support/model/NP300E5X-U01IN/)
   
-  2. Output if [inxi -F](https://smxi.org/docs/inxi.htm):
+2. Output if [inxi -F](https://smxi.org/docs/inxi.htm):
     
 <details>
 
@@ -43,7 +44,7 @@ The hardware specs of my old laptop are given below:
 
 </details>
   
-  3. Content of /etc/issue:
+3. Content of /etc/issue:
   
 <details>
   
@@ -71,7 +72,7 @@ The hardware specs of my old laptop are given below:
  ```
 </details>
  
- 4. Content of custom message during remote login by ssh
+4. Content of custom message during remote login by ssh
  
  <details>
   
@@ -108,9 +109,10 @@ The hardware specs of my old laptop are given below:
     printf " * USB Drives :    USB drives are automatically detected and mounted\n"
 ```
 </details>
- 5. The hardware specs of this old laptop are hard to find. A detailed datasheet has been obtained from [icecat](https://icecat.lu/). It is referred below:
  
-       [icecat: Datasheet for Samsung NP300E5X Notebook](https://icecat.lu/amp/p/vendorName/mpn/desc-19418433.html). 
+5. The hardware specs of this old laptop are hard to find. A detailed datasheet has been obtained from [icecat](https://icecat.lu/). It is referred below:
+ 
+      [icecat: Datasheet for Samsung NP300E5X Notebook](https://icecat.lu/amp/p/vendorName/mpn/desc-19418433.html). 
     
     In case the [link rots](https://www.nngroup.com/articles/fighting-linkrot/), parts of the datasheet table (as of Aug 4, 2020), is reproduced below:
 
@@ -504,7 +506,6 @@ The hardware specs of my old laptop are given below:
     </tr>
 </table>
 </p> </details>
-
 
 The key functions required of my home media server are as follows:
 
