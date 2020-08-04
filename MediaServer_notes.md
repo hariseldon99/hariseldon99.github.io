@@ -736,6 +736,13 @@ Also, I thought it a good idea to downclock the CPU in order to minimize overhea
   ```
 
 ## Extras
+### Additional peer-to-peer apps
+In addition to bittorrent, I'm experimenting with other [p2p](https://techterms.com/definition/p2p) networks. The Radarr and Sonarr PVR applications only support bittorrent and usenet, as far as I know. In addition, I have tried the following independently
+
+ * [Amule](https://www.amule.org/): A p2p application mainly accessing the EDonkey and Kad networks. Set it up as a daemon and run it as user "amule" with home directory at "/var/lib/amuled". See this [howto](https://linuxconfig.org/how-to-setup-amule-and-control-it-via-web-interface-on-a-raspberry-pi) for details. Again, it's not exclusively meant for a Raspberry Pi. [See this wiki](https://wiki.amule.org/wiki/Getting_Started) for getting started with amule. You may also need the [non-web remote gui](http://wiki.amule.org/wiki/FAQ_amulegui) for initial access and config.
+
+
+### TurnKey Linux MediaServer
 As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned media server installation CD that does a lot of what I've described above and more! Might want to check that out:
 
   [Turnkey Linux MediaServer: Simple Network Attached Media Storage](https://www.turnkeylinux.org/mediaserver)
