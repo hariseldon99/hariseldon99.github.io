@@ -7,37 +7,47 @@ The hardware specs of my old laptop are given below:
   1. Laptop Model: [SAMSUNG model: NP300E5X-U01IN](https://www.samsung.com/in/support/model/NP300E5X-U01IN/)
   
   2. Output if [inxi -F](https://smxi.org/docs/inxi.htm):
-  
-  ```console
-    admin@MediaServer:~$ inxi -F
-    System:    Host: MediaServer Kernel: 5.4.0-42-generic x86_64 bits: 64 Console: tty 0 Distro: Ubuntu 18.04.4 LTS
-    Machine:   Device: laptop System: SAMSUNG product: 300E4C/300E5C/300E7C v: 0.1 serial: N/A
-               Mobo: SAMSUNG model: NP300E5X-U01IN v: FAB1 serial: N/A
-               UEFI [Legacy]: Phoenix v: P06RAC date: 10/25/2012
-    Battery    BAT1: charge: 47.5 Wh 100.0% condition: 47.5/47.5 Wh (100%)
-    CPU:       Dual core Intel Core i3-2310M (-MT-MCP-) cache: 3072 KB
-               clock speeds: max: 2100 MHz 1: 843 MHz 2: 822 MHz 3: 844 MHz 4: 805 MHz
-    Graphics:  Card-1: Intel 2nd Generation Core Processor Family Integrated Graphics Controller
-               Card-2: NVIDIA GF108M [GeForce GT 620M]
-               Display Server: X.org 1.20.8 drivers: i915,nvidia tty size: 192x49 Advanced Data: N/A out of X
-    Audio:     Card-1 NVIDIA GF108 High Definition Audio Controller driver: snd_hda_intel
-               Card-2 Intel 7 Series/C216 Family High Definition Audio Controller driver: snd_hda_intel
-               Sound: Advanced Linux Sound Architecture v: k5.4.0-42-generic
-    Network:   Card-1: Qualcomm Atheros AR9485 Wireless Network Adapter driver: ath9k
-               IF: wlp2s0 state: up mac: 50:b7:c3:b2:80:88
-               Card-2: Realtek RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller driver: r8169
-               IF: enp3s0 state: down mac: 50:b7:c3:7e:36:ef
-    Drives:    HDD Total Size: 500.1GB (56.0% used)
-               ID-1: /dev/sda model: ST500LM030 size: 500.1GB
-    Partition: ID-1: / size: 458G used: 261G (61%) fs: ext4 dev: /dev/sda1
-    RAID:      No RAID devices: /proc/mdstat, md_mod kernel module present
-    Sensors:   System Temperatures: cpu: 55.0C mobo: N/A
-               Fan Speeds (in rpm): cpu: N/A
-    Info:      Processes: 155 Uptime: 18:44 Memory: 2323.2/3714.4MB Init: systemd runlevel: 3
-               Client: Shell (bash) inxi: 2.3.56 
-  ```
+    
+<details>
+
+<summary> CLICK HERE </summary>  
+
+```console
+  admin@MediaServer:~$ inxi -F
+  System:    Host: MediaServer Kernel: 5.4.0-42-generic x86_64 bits: 64 Console: tty 0 Distro: Ubuntu 18.04.4 LTS
+  Machine:   Device: laptop System: SAMSUNG product: 300E4C/300E5C/300E7C v: 0.1 serial: N/A
+             Mobo: SAMSUNG model: NP300E5X-U01IN v: FAB1 serial: N/A
+             UEFI [Legacy]: Phoenix v: P06RAC date: 10/25/2012
+  Battery    BAT1: charge: 47.5 Wh 100.0% condition: 47.5/47.5 Wh (100%)
+  CPU:       Dual core Intel Core i3-2310M (-MT-MCP-) cache: 3072 KB
+             clock speeds: max: 2100 MHz 1: 843 MHz 2: 822 MHz 3: 844 MHz 4: 805 MHz
+  Graphics:  Card-1: Intel 2nd Generation Core Processor Family Integrated Graphics Controller
+             Card-2: NVIDIA GF108M [GeForce GT 620M]
+             Display Server: X.org 1.20.8 drivers: i915,nvidia tty size: 192x49 Advanced Data: N/A out of X
+  Audio:     Card-1 NVIDIA GF108 High Definition Audio Controller driver: snd_hda_intel
+             Card-2 Intel 7 Series/C216 Family High Definition Audio Controller driver: snd_hda_intel
+             Sound: Advanced Linux Sound Architecture v: k5.4.0-42-generic
+  Network:   Card-1: Qualcomm Atheros AR9485 Wireless Network Adapter driver: ath9k
+             IF: wlp2s0 state: up mac: 50:b7:c3:b2:80:88
+             Card-2: Realtek RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller driver: r8169
+             IF: enp3s0 state: down mac: 50:b7:c3:7e:36:ef
+  Drives:    HDD Total Size: 500.1GB (56.0% used)
+             ID-1: /dev/sda model: ST500LM030 size: 500.1GB
+  Partition: ID-1: / size: 458G used: 261G (61%) fs: ext4 dev: /dev/sda1
+  RAID:      No RAID devices: /proc/mdstat, md_mod kernel module present
+  Sensors:   System Temperatures: cpu: 55.0C mobo: N/A
+             Fan Speeds (in rpm): cpu: N/A
+  Info:      Processes: 155 Uptime: 18:44 Memory: 2323.2/3714.4MB Init: systemd runlevel: 3
+             Client: Shell (bash) inxi: 2.3.56 
+```
+
+</details>
   
   3. Content of /etc/issue:
+  
+<details>
+  
+  <summary> CLICK HERE</summary> 
   
   ```console
     admin@MediaServer:~$ cat /etc/issue
@@ -59,9 +69,14 @@ The hardware specs of my old laptop are given below:
   * DVD Ripping :   Insert the disk in the drive and it should be ripped automatically to the Jellyfish userspace
   * USB Drives :    USB drives are automatically detected and mounted
  ```
+</details>
  
  4. Content of custom message during remote login by ssh
  
+ <details>
+  
+  <summary> CLICK HERE </summary>
+  
  ```console
     admin@MediaServer:~$ cat /etc/update-motd.d/01-mediaserver-info 
     #!/bin/bash
@@ -92,10 +107,12 @@ The hardware specs of my old laptop are given below:
     printf " * DVD Ripping :   Insert the disk in the drive and it should be ripped automatically to the Jellyfin userspace\n"
     printf " * USB Drives :    USB drives are automatically detected and mounted\n"
 ```
-
+</details>
  5. The hardware specs of this old laptop are hard to find. A detailed datasheet has been obtained from [icecat](https://icecat.lu/). It is referred below:
  
-    [icecat: Datasheet for Samsung NP300E5X Notebook](https://icecat.lu/amp/p/vendorName/mpn/desc-19418433.html). In case the [link rots](https://www.nngroup.com/articles/fighting-linkrot/), parts of the datasheet table (as of Aug 4, 2020), is reproduced below:
+       [icecat: Datasheet for Samsung NP300E5X Notebook](https://icecat.lu/amp/p/vendorName/mpn/desc-19418433.html). 
+    
+    In case the [link rots](https://www.nngroup.com/articles/fighting-linkrot/), parts of the datasheet table (as of Aug 4, 2020), is reproduced below:
 
 <details><summary>CLICK HERE</summary> <p>
 
@@ -486,8 +503,6 @@ The hardware specs of my old laptop are given below:
                                                     IEEE 802.11b,IEEE 802.11g,IEEE 802.11n                                                </td>
     </tr>
 </table>
-
-
 </p> </details>
 
 
