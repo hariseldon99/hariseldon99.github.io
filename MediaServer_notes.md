@@ -1,19 +1,18 @@
 # MediaServer Notes
 # Table of contents
 
-- [MediaServer Notes](#mediaserver-notes)
-  - [Introduction](#introduction)
-  - [Step 1: Make Ubuntu headless](#step-1-make-ubuntu-headless)
-  - [Step 2: Install a Media Streaming System:](#step-2-install-a-media-streaming-system)
-  - [Step 3: Install bittorrent client and indexers:](#step-3-install-bittorrent-client-and-indexers)
-  - [Step 4: Automounting USB and Automatic DVD-Ripping](#step-4-automounting-usb-and-automatic-dvd-ripping)
-  - [Step 5: Setup unified interface using Organizr and EasyServerMonitor:](#step-5-setup-unified-interface-using-organizr-and-easyservermonitor)
-  - [Step 6: Users, Groups and Permissions](#step-6-users-groups-and-permissions)
-  - [Final Step: Client software](#final-step-client-software)
-  - [List of Software Installed with heavy manual config:](#list-of-software-installed-with-heavy-manual-config)
-  - [Miscellaneous](#miscellaneous)
-  - [Extras](#extras)
-  - [TODO:](#todo)
+- [Introduction](#introduction)
+- [Step 1: Make Ubuntu headless](#step-1-make-ubuntu-headless)
+- [Step 2: Install a Media Streaming System:](#step-2-install-a-media-streaming-system)
+- [Step 3: Install bittorrent client and indexers:](#step-3-install-bittorrent-client-and-indexers)
+- [Step 4: Automounting USB and Automatic DVD-Ripping](#step-4-automounting-usb-and-automatic-dvd-ripping)
+- [Step 5: Setup unified interface using Organizr and EasyServerMonitor:](#step-5-setup-unified-interface-using-organizr-and-easyservermonitor)
+- [Step 6: Users, Groups and Permissions](#step-6-users-groups-and-permissions)
+- [Final Step: Client software](#final-step-client-software)
+- [List of Software Installed with heavy manual config:](#list-of-software-installed-with-heavy-manual-config)
+- [Miscellaneous](#miscellaneous)
+- [Extras](#extras)
+- [TODO:](#todo)
   
 ## Introduction
 In July, 2020, I setup an old laptop with a busted screen as a Linux media server to download and stream movies and TV episodes over my LAN to various wifi devices (laptops, tablets and smart TVs). Below are the notes of the various steps taken and software installed in order to achieve this.
