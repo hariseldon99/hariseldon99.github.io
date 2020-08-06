@@ -749,9 +749,15 @@ As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned med
 
 ## TODO:
 1. Look into WAN access via openvpn. Don't forward any ports from WAN to LAN (other than bittorrent)
-2. Integrate Radarr and Sonarr with trakt.tv (Google for this).
+
+2. Integrate Radarr and Sonarr with [trakt.tv](https://trakt.tv): 
+    
+    **Update:** Radarr lists support trakt natively. [See this reddit thread](https://www.reddit.com/r/radarr/comments/aixb2i/how_to_setup_trakttv_for_lists/). However, as of today (2020-08-06), Sonarr lacks list functionality. Alternatives for both Radarr and Sonarr are [Listarr](https://github.com/christophercatt/listarr) (Server, Sonarr only) and/or [Traktarr](https://github.com/l3uddz/traktarr) (Console based, both radarr and Sonarr). need to look at these.
+
 3. Config mondorescue to backup to iso (http://www.mondorescue.org/docs.shtml)
+
 4. Access files in the server via WEBDAV: (https://danrohde.github.io/webdavcgi/)
+
 5. Look into better CPU fan control with [NBFC](https://github.com/hirschmann/nbfc). 
 
     **Update:** Samsung laptops not supported by NBFC. Requires [manual config](https://github.com/hirschmann/nbfc/wiki). Looks like quite a schlep.
