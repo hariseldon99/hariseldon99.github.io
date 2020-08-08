@@ -551,7 +551,7 @@ Finally, I opted for RAM transcoding, where transcoded files are written to RAM 
   
 ## Step 3: Install bittorrent client and indexers:
 
-1. Bittorrent client: I've chosen [transmission](https://transmissionbt.com/), but [deluge](https://deluge-torrent.org/) also has a web interface. Installing transmission without a GUI (headless) and running the web interface can be done as per the instructions below:
+1. Bittorrent client: I've chosen [transmission](https://transmissionbt.com/), but there are other clients with remote interfaces (see [Extras](#extras)). Installing transmission without a GUI (headless) and running the web interface can be done as per the instructions below:
 
     [How to set up transmission-daemon on a Raspberry Pi and control it via web interface](https://linuxconfig.org/how-to-set-up-transmission-daemon-on-a-raspberry-pi-and-control-it-via-web-interface). Note that it doesn't have to be done in a raspberry pi. The instructions will work on any computer running Debian or Ubuntu Linux.
 
@@ -634,6 +634,8 @@ Finally, since all the different softwares installed above often want to communi
 Finally, of course, we'll need clients to connect and stream from the Jellyfin server. The clients page of the Jellyfin website has a lot of information on this:
 
 [Jellyfin Clients](https://jellyfin.org/clients/)
+
+I have chosen [jellyfin-kodi](https://github.com/jellyfin/jellyfin-kodi) for my linux machines (this is actually an addon for the [kodi](https://kodi.tv/) media center) and both jellyfin-kodi and [Jellyfin for Android TV](https://play.google.com/store/apps/details?id=org.jellyfin.androidtv) for my smart tvs. The Kodi addon is much nicer than the native Jellyfin client(s) IMO.
 
 Clients exist for several operating systems and smart media devices ranging from Android TVs to Amazon Fire-TV. If none of them work, then enable the [DLNA server in Jellyfish](https://jellyfin.org/docs/general/networking/dlna.html) in the Media Server and use any DLNA-compatible video player in your device to detect and connect to it. Many such players exist for all sorts of operating systems. A good Open Source one is [VLC](https://www.videolan.org/), also supported on [Android and Amazon Fire TV](https://www.videolan.org/vlc/download-android.html).
 
@@ -754,7 +756,7 @@ Also, I thought it a good idea to downclock the CPU in order to minimize overhea
 ## Bittorrent thin clients
 The web interface for the [transmission bittorrent client](https://transmissionbt.com/) is a bit basic. You can enhance it with a better web interface, or use a client from another machine to connect to it. Details are available in the [web site of transmission itself](https://transmissionbt.com/resources/).
 
-Alternatively, you can try deluge, a more sophisticated bittorrent client with a more detailed web interface. However, transmission, coded mainly in C/C++, [has the lowest resource usage of all bittorrent clients](https://transmissionbt.com/about/). Deluge, coded in python, consumes much more memory.
+Alternatively, you can try more sophisticated bittorrent clients with more detailed web interfaces. Examples are [deluge](https://deluge-torrent.org/) and [qbittorrent](https://www.qbittorrent.org/). However, transmission, coded mainly in C/C++, [has the lowest resource usage of all bittorrent clients](https://transmissionbt.com/about/). Deluge, coded in python, consumes much more memory. Qbittorrent is written in C++, and is, by accounts, pretty lean, although I have not tried it. [See this link](https://www.linuxbabe.com/ubuntu/install-qbittorrent-ubuntu-18-04-desktop-server) for headless config for qbittorrent.
 
 ### Additional peer-to-peer apps
 In addition to bittorrent, I'm experimenting with other [p2p](https://techterms.com/definition/p2p) networks. The Radarr and Sonarr PVR applications only support bittorrent and usenet, as far as I know. In addition, I have tried the following independently
