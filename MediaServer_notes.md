@@ -750,6 +750,12 @@ Also, I thought it a good idea to downclock the CPU in order to minimize overhea
   ```
 
 ## Extras
+
+## Bittorrent thin clients
+The web interface for the [transmission bittorrent client](https://transmissionbt.com/) is a bit basic. You can enhance it with a better web interface, or use a client from another machine to connect to it. Details are available in the [web site of transmission itself](https://transmissionbt.com/resources/).
+
+Alternatively, you can try deluge, a more sophisticated bittorrent client with a more detailed web interface. However, transmission, coded mainly in C/C++, [has the lowest resource usage of all bittorrent clients](https://transmissionbt.com/about/). Deluge, coded in python, consumes much more memory.
+
 ### Additional peer-to-peer apps
 In addition to bittorrent, I'm experimenting with other [p2p](https://techterms.com/definition/p2p) networks. The Radarr and Sonarr PVR applications only support bittorrent and usenet, as far as I know. In addition, I have tried the following independently
 
