@@ -753,7 +753,7 @@ Also, I thought it a good idea to downclock the CPU in order to minimize overhea
 
 ## Extras
 
-## Bittorrent thin clients
+### Bittorrent thin clients
 The web interface for the [transmission bittorrent client](https://transmissionbt.com/) is a bit basic. You can enhance it with a better web interface, or use a client from another machine to connect to it. Details are available in the [web site of transmission itself](https://transmissionbt.com/resources/).
 
 Alternatively, you can try more sophisticated bittorrent clients with more detailed web interfaces. Examples are [deluge](https://deluge-torrent.org/) and [qbittorrent](https://www.qbittorrent.org/). However, transmission, coded mainly in C/C++, [has the lowest resource usage of all bittorrent clients](https://transmissionbt.com/about/). Deluge, coded in python, consumes much more memory. Qbittorrent is written in C++, and is, by accounts, pretty lean, although I have not tried it. [See this link](https://www.linuxbabe.com/ubuntu/install-qbittorrent-ubuntu-18-04-desktop-server) for headless config for qbittorrent.
@@ -763,7 +763,7 @@ In addition to bittorrent, I'm experimenting with other [p2p](https://techterms.
 
  * [Amule](https://www.amule.org/): A p2p application mainly accessing the EDonkey and Kad networks. Set it up as a daemon and run it as user "amule" with home directory at "/var/lib/amuled". See this [howto](https://linuxconfig.org/how-to-setup-amule-and-control-it-via-web-interface-on-a-raspberry-pi) for details. Again, it's not exclusively meant for a Raspberry Pi. [See this wiki](https://wiki.amule.org/wiki/Getting_Started) for getting started with amule. You may also need the [non-web remote gui](http://wiki.amule.org/wiki/FAQ_amulegui) for initial access and config.
 
-## Remote manual transcoding
+### Remote manual transcoding
 In case you need to [transcode](https://searchapparchitecture.techtarget.com/definition/transcoding) downloaded videos manually in order to improve playback, but need a remote interface to the server to do that, check out the [docker installation of handbrake (ffmpeg)](https://github.com/jlesage/docker-handbrake) that redirects to a web view. Truth be told, [ffmpeg](https://ffmpeg.org/) performs poorly on this laptop anyway, so setting up a remote interface might not be worth it. Instead, I choose to [mount the jellyfin directory over sshfs](https://www.linode.com/docs/networking/ssh/using-sshfs-on-linux/) on a more powerful machine and transcode [using handbrake](https://handbrake.fr/).
 
 ### TurnKey Linux MediaServer
