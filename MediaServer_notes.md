@@ -783,3 +783,5 @@ As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned med
 5. Look into better CPU fan control with [NBFC](https://github.com/hirschmann/nbfc). 
 
     **Update:** Samsung laptops not supported by NBFC. Requires [manual config](https://github.com/hirschmann/nbfc/wiki). Looks like quite a schlep.
+
+6. Setup a web interface to handbrake for in-server headless manual transcoding. See the [docker installation of handbrake](https://github.com/jlesage/docker-handbrake) that redirects to a web view.
