@@ -763,6 +763,8 @@ In addition to bittorrent, I'm experimenting with other [p2p](https://techterms.
 
  * [Amule](https://www.amule.org/): A p2p application mainly accessing the EDonkey and Kad networks. Set it up as a daemon and run it as user "amule" with home directory at "/var/lib/amuled". See this [howto](https://linuxconfig.org/how-to-setup-amule-and-control-it-via-web-interface-on-a-raspberry-pi) for details. Again, it's not exclusively meant for a Raspberry Pi. [See this wiki](https://wiki.amule.org/wiki/Getting_Started) for getting started with amule. You may also need the [non-web remote gui](http://wiki.amule.org/wiki/FAQ_amulegui) for initial access and config.
 
+## Remote manual transcoding
+In case you need to [transcode](https://searchapparchitecture.techtarget.com/definition/transcoding) downloaded videos manually in order to improve playback, but need a remote interface to the server to do that, check out the [docker installation of handbrake (ffmpeg)](https://github.com/jlesage/docker-handbrake) that redirects to a web view. Truth be told, [ffmpeg](https://ffmpeg.org/) performs poorly on this laptop anyway, so setting up a remote interface might not be worth it. Instead, I choose to [mount the jellyfin directory over sshfs](https://www.linode.com/docs/networking/ssh/using-sshfs-on-linux/) on a more powerful machine and transcode [using handbrake](https://handbrake.fr/).
 
 ### TurnKey Linux MediaServer
 As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned media server installation CD that does a lot of what I've described above and more! Might want to check that out:
@@ -783,5 +785,3 @@ As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned med
 5. Look into better CPU fan control with [NBFC](https://github.com/hirschmann/nbfc). 
 
     **Update:** Samsung laptops not supported by NBFC. Requires [manual config](https://github.com/hirschmann/nbfc/wiki). Looks like quite a schlep.
-
-6. Setup a web interface to handbrake for in-server headless manual transcoding. See the [docker installation of handbrake](https://github.com/jlesage/docker-handbrake) that redirects to a web view.
