@@ -753,6 +753,14 @@ Also, I thought it a good idea to downclock the CPU in order to minimize overhea
 
 ## Extras
 
+### Integration with Trakt
+
+Trakt is an online platform that primarily keeps track of TV shows and movies you watch. It integrates with your media center or home theater PC to enable scrobbling, so everything is automatic. You can create a trakt account at (https://trakt.tv/), create empty lists of movies and have radarr and sonarr automatically download items from them once they get populated. 
+
+ * While trakt lists can be added directly to radarr from the "List" option in radarr's settings, this cannot (as of August 10, 2020) be done with Sonarr. Until that happens, probably best to install and run [traktarr](https://github.com/l3uddz/traktarr) as a service that periodically scans yout trakt lists for content to add to radarr and sonarr. Check out the GitHub page linked above for setup instructions. Note that the configuration file is a [json file](https://www.json.org/), and needs extensive manual editing. For some background on the structure of json files (they're similar to python dictionaries), [see this introduction](https://www.digitalocean.com/community/tutorials/an-introduction-to-json)
+
+ * You can also [scrobble](https://www.wired.com/2012/11/richard-jones-scrobbling/) your movies and shows from Jellyfin to trakt with the [Trakt plugin for Jellyfin](https://github.com/jellyfin/jellyfin-plugin-trakt).
+
 ### Bittorrent thin clients
 The web interface for the [transmission bittorrent client](https://transmissionbt.com/) is a bit basic. You can enhance it with a better web interface, or use a client from another machine to connect to it. Details are available in the [web site of transmission itself](https://transmissionbt.com/resources/).
 
@@ -773,14 +781,12 @@ As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned med
 
 ## TODO:
 
-1. Integrate Radarr and Sonarr with [trakt.tv](https://trakt.tv) using [Traktarr](https://github.com/l3uddz/traktarr) (updating daemon).
+1. Config mondorescue to backup to iso (http://www.mondorescue.org/docs.shtml)
 
-2. Config mondorescue to backup to iso (http://www.mondorescue.org/docs.shtml)
+2. Access files in the server via WEBDAV: (https://danrohde.github.io/webdavcgi/)
 
-3. Access files in the server via WEBDAV: (https://danrohde.github.io/webdavcgi/)
-
-4. Look into better CPU fan control with [NBFC](https://github.com/hirschmann/nbfc). 
+3. Look into better CPU fan control with [NBFC](https://github.com/hirschmann/nbfc). 
 
     **Update:** Samsung laptops not supported by NBFC. Requires [manual config](https://github.com/hirschmann/nbfc/wiki). Looks like quite a schlep.
 
-5. Look into WAN access via openvpn. Don't forward any ports from WAN to LAN (other than bittorrent)
+4. Look into WAN access via openvpn. Don't forward any ports from WAN to LAN (other than bittorrent)
