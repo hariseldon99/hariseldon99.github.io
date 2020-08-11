@@ -777,6 +777,8 @@ In addition to bittorrent, I'm experimenting with other [p2p](https://techterms.
       
       * Note that radarr, sonarr, lidarr etc do not integrate with edonkey or any other p2p network besides usenet and bittorrent. As a workaround, set the [incoming folder of amule downloads](https://wiki.amule.org/wiki/AMule_files#Directories) to wherever (I have it set to /var/lib/amuled/.aMule/Incoming), then install the ["Auto Organnize Plugin"](https://jellyfin.org/docs/general/server/plugins/index.html#auto-organize) to Jellyfin and have it monitor the amule download folder for content, which it then integrates into Jellyfin's Libraries. This way, I can manually set downloads and they, at least, get integrated into Jellyfin properly.
 
+  * [MLdonkey](http://mldonkey.sourceforge.net): A p2p client (with a headless web interface) that supports multiple p2p networks. The standard setup described in their wiki should work well. Haven't really tried it as it doesn't integrate with any of the indexers (radarr, sonarr etc).
+  
 ### Remote manual transcoding
 In case you need to [transcode](https://searchapparchitecture.techtarget.com/definition/transcoding) downloaded videos manually in order to improve playback, but need a remote interface to the server to do that, check out the [docker installation of handbrake (ffmpeg)](https://github.com/jlesage/docker-handbrake) that redirects to a web view. Truth be told, [ffmpeg](https://ffmpeg.org/) performs poorly on this laptop anyway, so setting up a remote interface might not be worth it. Instead, I choose to [mount the jellyfin directory over sshfs](https://www.linode.com/docs/networking/ssh/using-sshfs-on-linux/) on a more powerful machine and transcode [using handbrake](https://handbrake.fr/).
 
