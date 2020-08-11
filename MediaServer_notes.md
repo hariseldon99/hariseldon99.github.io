@@ -783,10 +783,8 @@ As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned med
 
 1. Config mondorescue to backup to iso (http://www.mondorescue.org/docs.shtml)
 
-2. Access files in the server via WEBDAV: (https://danrohde.github.io/webdavcgi/)
-
-3. Look into better CPU fan control with [NBFC](https://github.com/hirschmann/nbfc). 
+2. Look into better CPU fan control with [NBFC](https://github.com/hirschmann/nbfc). 
 
     **Update:** Samsung laptops not supported by NBFC. Requires [manual config](https://github.com/hirschmann/nbfc/wiki). Looks like quite a schlep.
 
-4. Look into WAN access via openvpn. Don't forward any ports from WAN to LAN (other than bittorrent)
+3. Look into WAN access via openvpn. Don't forward any ports from WAN to LAN (other than bittorrent)
