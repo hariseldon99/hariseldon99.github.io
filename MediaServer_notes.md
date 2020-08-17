@@ -545,7 +545,7 @@ Finally, I opted for RAM transcoding, where transcoded files are written to RAM 
  
  I chose to mount it on the path ['/dev/shm'](https://www.cyberciti.biz/files/linux-kernel/Documentation/filesystems/tmpfs.txt), and use the Jellyfin transcode settings page to point the transcoder to it (see screenshot below). The settings can be obtained by navigating in the Jellyfish Home page as follows: Navigation menu on the left + "Admin : Dashboard --> Playback --> Transcoding (top of the page)"
  
-  <a href="https://ibb.co/tCbXXLC"><img src="https://i.ibb.co/q1R55J1/image.png" alt="image" border="0"></a>
+ ![Transcoder Settings](transcoder_se4ttings.png)
 
   As can be seen in the screenshot above, the transcoder setting can be used to enable VAAPI transcoding as described in the Jellyfin "Quick Start" page (linked above) on Hardware Acceleration.
   
@@ -571,9 +571,11 @@ Finally, I opted for RAM transcoding, where transcoded files are written to RAM 
   
    * [Installing Radarr, Sonarr and Deluge on your Unraid Server](https://blog.harveydelaney.com/installing-radarr-sonar-and-deluge-on-your-unraid-setup/)
 
-3. Finally, in order to keep the Transmission client download list from bloating, I used this HOWTO to automatically remove completed downloads from transmission:
 
-    [Guide : Auto removal of downloads from transmission 2.82](https://community.wd.com/t/guide-auto-removal-of-downloads-from-transmission-2-82/93156)
+Indexers enabled:
+
+![Indexers Enabled](image.png)
+
 
 ## Step 4: Automounting USB and Automatic DVD-Ripping
 
