@@ -545,7 +545,7 @@ Finally, I opted for RAM transcoding, where transcoded files are written to RAM 
  
  I chose to mount it on the path ['/dev/shm'](https://www.cyberciti.biz/files/linux-kernel/Documentation/filesystems/tmpfs.txt), and use the Jellyfin transcode settings page to point the transcoder to it (see screenshot below). The settings can be obtained by navigating in the Jellyfish Home page as follows: Navigation menu on the left + "Admin : Dashboard --> Playback --> Transcoding (top of the page)"
  
- ![Transcoder Settings](transcoder_se4ttings.png)
+ ![Transcoder Settings](transcoder_settings.png)
 
   As can be seen in the screenshot above, the transcoder setting can be used to enable VAAPI transcoding as described in the Jellyfin "Quick Start" page (linked above) on Hardware Acceleration.
   
