@@ -688,7 +688,6 @@ Clients exist for several operating systems and smart media devices ranging from
   Welcome to \n \l
 
   * Services :      Point any Web-Browser to http://\4{wlp2s0} for details
-  * DVD Ripping :   Insert the disk in the drive and it should be ripped automatically to the Jellyfish userspace
   * USB Drives :    USB drives are automatically detected and mounted
  ```
 </details>
@@ -726,7 +725,6 @@ Clients exist for several operating systems and smart media devices ranging from
 
     printf "\n"
     printf " * Services :      Point any Web-Browser to http://"$IP_ADDRESS" for details\n"
-    printf " * DVD Ripping :   Insert the disk in the drive and it should be ripped automatically to the Jellyfin userspace\n"
     printf " * USB Drives :    USB drives are automatically detected and mounted\n"
 ```
 </details>
