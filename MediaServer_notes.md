@@ -5,7 +5,7 @@
 - [Step 1: Make Ubuntu headless](#step-1-make-ubuntu-headless)
 - [Step 2: Install a Media Streaming System:](#step-2-install-a-media-streaming-system)
 - [Step 3: Install bittorrent client and indexers:](#step-3-install-bittorrent-client-and-indexers)
-- [Step 4: Automounting USB and Automatic DVD-Ripping](#step-4-automounting-usb-and-automatic-dvd-ripping)
+- [Step 4: Automounting USB](#step-4-automounting-usb)
 - [Step 5: Setup unified interface using Organizr and EasyServerMonitor:](#step-5-setup-unified-interface-using-organizr-and-easyservermonitor)
 - [Step 6: Users, Groups and Permissions](#step-6-users-groups-and-permissions)
 - [Final Step: Client software](#final-step-client-software)
@@ -577,7 +577,7 @@ Indexers enabled:
 ![Indexers Enabled](image.png)
 
 
-## Step 4: Automounting USB mounting
+## Step 4: Automounting USB
 
 Here, I wanted to setup the media server in such as way that inserting a USB thumb drive or external hard drive into the machine would automatically mount it without manual intervention. This way, I can remotely log in and just copy the files from the drives to wherever. The simplest way is to use Ubuntu's systemd to launch the automount service at boot, the service being [automount-usb](https://github.com/raamsri/automount-usb). Simply checkout the github repository and follow the instructions therein
 
