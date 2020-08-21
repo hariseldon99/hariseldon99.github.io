@@ -471,7 +471,7 @@ The key requirements of my home media server are as follows:
   
   7. That it automatically mounts any USB storage devices attached to it (for manually copying content), and
   
-  8. That it [automatically rip any DVD](https://www.toptenreviews.com/what-is-the-difference-between-dvd-ripping-and-copying) placed in the DVD drive and allow the content to be streamed.
+  8. ~~That it [automatically rip any DVD](https://www.toptenreviews.com/what-is-the-difference-between-dvd-ripping-and-copying) placed in the DVD drive and allow the content to be streamed.~~ (This is now moot, as I swapped out the dvd drive for an extra HDD using a [laptop hard drive caddy](https://youtu.be/H09SEyoE8yY).
 
 
 To these ends, I stripped down my Ubuntu installation from standard to barebones, so that it can run headless without starting X. Then reinstall the nvidia graphics drivers with X so that they're running at least, then setup ssh and remote-login, then setup all the abovementioned software. Note that the servers are not natted to WAN for security reasons.
@@ -577,7 +577,7 @@ Indexers enabled:
 ![Indexers Enabled](image.png)
 
 
-## Step 4: Automounting USB and Automatic DVD-Ripping
+## Step 4: Automounting USB mounting
 
 Here, I wanted to setup the media server in such as way that inserting a USB thumb drive or external hard drive into the machine would automatically mount it without manual intervention. This way, I can remotely log in and just copy the files from the drives to wherever. The simplest way is to use Ubuntu's systemd to launch the automount service at boot, the service being [automount-usb](https://github.com/raamsri/automount-usb). Simply checkout the github repository and follow the instructions therein
 
@@ -586,7 +586,6 @@ Here, I wanted to setup the media server in such as way that inserting a USB thu
   $ cd automount-usb
   $ sudo ./CONFIGURE.sh
   ```
- In addition, I setup the system to automatically mount and rip any inserted DVD discs and copy the content files over to a separate folder in the Jellyfin media user space. To do that, I setup [Automatic Ripping Machine (ARM)](https://b3n.org/automatic-ripping-machine/). Just check out the [relevant GitHub page](https://github.com/automatic-ripping-machine/automatic-ripping-machine) and follow the instructions therein.
 
 
 ## Step 5: Setup unified interface using Organizr and EasyServerMonitor:
@@ -754,6 +753,10 @@ Also, I thought it a good idea to downclock the CPU in order to minimize overhea
   ```
 
 ## Extras
+
+### Automatic DVD ripping:
+
+If you have a DVD drive in your system, you can setup the system to automatically mount and rip any inserted DVD discs and copy the content files over to a separate folder in the Jellyfin media user space. To do that, I setup [Automatic Ripping Machine (ARM)](https://b3n.org/automatic-ripping-machine/). Just check out the [relevant GitHub page](https://github.com/automatic-ripping-machine/automatic-ripping-machine) and follow the instructions therein.
 
 ### Integration with Trakt
 
