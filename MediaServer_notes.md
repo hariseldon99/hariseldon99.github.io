@@ -799,3 +799,5 @@ As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned med
     **Update:** Samsung laptops not supported by NBFC. Requires [manual config](https://github.com/hirschmann/nbfc/wiki). Looks like quite a schlep.
 
 3. Look into WAN access via openvpn. Don't forward any ports from WAN to LAN (other than bittorrent)
+
+4. Problems in Organizr: Jellyfin Homepage item not working. Calendar not showing any info from radarr/sonarr.
