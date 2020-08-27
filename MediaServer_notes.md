@@ -782,5 +782,3 @@ As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned med
 1. Config mondorescue to backup to iso (http://www.mondorescue.org/docs.shtml)
 
 2. Look into WAN access via openvpn. Don't forward any ports from WAN to LAN (other than bittorrent)
-
-3. Problems in Organizr: Jellyfin Homepage item not working.
