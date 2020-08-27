@@ -2,6 +2,7 @@
 # Table of contents
 
 - [Introduction](#introduction)
+- [Summary of required software](#summary-of-required-software)
 - [Step 1: Make Ubuntu headless](#step-1-make-ubuntu-headless)
 - [Step 2: Install a Media Streaming System:](#step-2-install-a-media-streaming-system)
 - [Step 3: Install bittorrent client and indexers:](#step-3-install-bittorrent-client-and-indexers)
@@ -9,7 +10,6 @@
 - [Step 5: Setup unified interface using Organizr and EasyServerMonitor:](#step-5-setup-unified-interface-using-organizr-and-easyservermonitor)
 - [Step 6: Users, Groups and Permissions](#step-6-users-groups-and-permissions)
 - [Final Step: Client software](#final-step-client-software)
-- [List of Software Installed with heavy manual config:](#list-of-software-installed-with-heavy-manual-config)
 - [Miscellaneous](#miscellaneous)
 - [Extras](#extras)
 - [TODO:](#todo)
@@ -476,6 +476,28 @@ The key requirements of my home media server are as follows:
 
 To these ends, I stripped down my Ubuntu installation from standard to barebones, so that it can run headless without starting X. Then reinstall the nvidia graphics drivers with X so that they're running at least, then setup ssh and remote-login, then setup all the abovementioned software. Note that the servers are not natted to WAN for security reasons.
 
+## Summary of required software
+
+This is the order in which the tasks should be done.
+
+1.  Headless Ubuntu: https://help.ubuntu.com/community/Installation/MinimalCD
+
+2.  Transmission-daemon : https://transmissionbt.com/
+
+3.  Jellyfin media server : https://jellyfin.org
+
+4.  Jackett : https://github.com/Jackett/Jackett
+
+5.  Radarr : https://radarr.video
+
+6.  Sonarr : https://sonarr.tv
+
+7.  Organizr : https://organizr.app/
+
+8.  eZServerMonitor : https://www.ezservermonitor.com/ (embedded as an iframe in organizr)
+
+9.  automount-usb : https://github.com/raamsri/automount-usb
+
 ## Step 1: Make Ubuntu headless
 
 
@@ -625,31 +647,7 @@ Finally, of course, we'll need clients to connect and stream from the Jellyfin s
 
 [Jellyfin Clients](https://jellyfin.org/clients/)
 
-I have chosen [jellyfin-kodi](https://github.com/jellyfin/jellyfin-kodi) for my linux machines (this is actually an addon for the [kodi](https://kodi.tv/) media center) and both jellyfin-kodi and [Jellyfin for Android TV](https://play.google.com/store/apps/details?id=org.jellyfin.androidtv) for my smart tvs. The Kodi addon is much nicer than the native Jellyfin client(s) IMO.
-
-Clients exist for several operating systems and smart media devices ranging from Android TVs to Amazon Fire-TV. If none of them work, then enable the [DLNA server in Jellyfish](https://jellyfin.org/docs/general/networking/dlna.html) in the Media Server and use any DLNA-compatible video player in your device to detect and connect to it. Many such players exist for all sorts of operating systems. A good Open Source one is [VLC](https://www.videolan.org/), also supported on [Android and Amazon Fire TV](https://www.videolan.org/vlc/download-android.html).
-
-## List of Software Installed with heavy manual config:
-
-This is the order in which the tasks should be done.
-
-1.  Headless Ubuntu: https://help.ubuntu.com/community/Installation/MinimalCD
-
-2.  Transmission-daemon : https://transmissionbt.com/
-
-3.  Jellyfin media server : https://jellyfin.org
-
-4.  Jackett : https://github.com/Jackett/Jackett
-
-5.  Radarr : https://radarr.video
-
-6.  Sonarr : https://sonarr.tv
-
-7.  Organizr : https://organizr.app/
-
-8.  eZServerMonitor : https://www.ezservermonitor.com/ (embedded as an iframe in organizr)
-
-9.  automount-usb : https://github.com/raamsri/automount-usb
+You can also use any web browser and connect via organizr. In any case, clients exist for several operating systems and smart media devices ranging from Android TVs to Amazon Fire-TV. If none of them work, then enable the [DLNA server in Jellyfish](https://jellyfin.org/docs/general/networking/dlna.html) in the Media Server and use any DLNA-compatible video player in your device to detect and connect to it. Many such players exist for all sorts of operating systems. A good Open Source one is [VLC](https://www.videolan.org/), also supported on [Android and Amazon Fire TV](https://www.videolan.org/vlc/download-android.html).
 
 
 ## Miscellaneous
