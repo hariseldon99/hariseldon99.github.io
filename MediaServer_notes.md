@@ -781,10 +781,6 @@ As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned med
 
 1. Config mondorescue to backup to iso (http://www.mondorescue.org/docs.shtml)
 
-2. Look into better CPU fan control with [NBFC](https://github.com/hirschmann/nbfc). 
+2. Look into WAN access via openvpn. Don't forward any ports from WAN to LAN (other than bittorrent)
 
-    **Update:** Samsung laptops not supported by NBFC. Requires [manual config](https://github.com/hirschmann/nbfc/wiki). Looks like quite a schlep.
-
-3. Look into WAN access via openvpn. Don't forward any ports from WAN to LAN (other than bittorrent)
-
-4. Problems in Organizr: Jellyfin Homepage item not working. Calendar not showing any info from radarr/sonarr.
+3. Problems in Organizr: Jellyfin Homepage item not working.
