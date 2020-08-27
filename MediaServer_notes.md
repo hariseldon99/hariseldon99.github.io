@@ -595,20 +595,9 @@ An excellent software for keeping all your media services together for easy view
 
   [The Ultimate Organizr V2 Setup Guide for Windows](https://smarthomepursuits.com/install-organizr-v2-windows/)
 
-The setup instructions can be a bit confusing, so I summarize below.
+The instructions can be readily adapted to Ubuntu.
 
-  1. First, setup an http web server with php hooks enabled. I chose the lightweight ['lighttpd'](https://www.lighttpd.net/) server due to its speed and small footprint, but more standard ones like [Apache](https://httpd.apache.org/) or [Nginx](https://www.nginx.com/) can also be used. See this HOWTO on setting up lighttpd with PHP enabled:
-  
-      [Setup Lighttpd Web Server with PHP Supports on Ubuntu Servers](https://websiteforstudents.com/setup-lighttpd-web-server-with-php-supports-on-ubuntu-servers/)
-
-  2. Next, Clone/Download the GitHub page of [OrganizrInstaller](https://github.com/elmerfdz/OrganizrInstaller), navigate to the folder for the ubuntu installer script, and launch it.
-     
-     ```console
-     $ git clone https://github.com/elmerfdz/OrganizrInstaller
-     $ cd OrganizrInstaller/ubuntu/oui
-     $ sudo bash ./ou_installer.sh
-     ```
-  3. Finally, an interesting trick can be to run a simple PHP-web based system monitor and enbed the output on your organizr home page. I chose [eZServerMonitor](https://www.ezservermonitor.com/) due to its simplicity and low footprint. Install it in a subdirectory of your organizr install, then open Organizr page in your browser, go to 'settings -> Tab Editor -> Homepage Items -> CUSTOMHTML-1' and input the following html markup tag 
+Finally, an interesting trick can be to run a simple PHP-web based system monitor and enbed the output on your organizr home page. I chose [eZServerMonitor](https://www.ezservermonitor.com/) due to its simplicity and low footprint. Install it in a subdirectory of your organizr install, then open Organizr page in your browser, go to 'settings -> Tab Editor -> Homepage Items -> CUSTOMHTML-1' and input the following html markup tag 
   
      ```html
         <iframe src="http://192.168.1.2/apps/ezservermonitor/index.php" name="System Monitor" height="1400px" width="100%" title="System Monitor"></iframe>
@@ -641,27 +630,27 @@ I have chosen [jellyfin-kodi](https://github.com/jellyfin/jellyfin-kodi) for my 
 Clients exist for several operating systems and smart media devices ranging from Android TVs to Amazon Fire-TV. If none of them work, then enable the [DLNA server in Jellyfish](https://jellyfin.org/docs/general/networking/dlna.html) in the Media Server and use any DLNA-compatible video player in your device to detect and connect to it. Many such players exist for all sorts of operating systems. A good Open Source one is [VLC](https://www.videolan.org/), also supported on [Android and Amazon Fire TV](https://www.videolan.org/vlc/download-android.html).
 
 ## List of Software Installed with heavy manual config:
-1.  Jellyfin media server : https://jellyfin.org
 
-2.  Radarr : https://radarr.video
+This is the order in which the tasks should be done.
 
-3.  Sonarr : https://sonarr.tv
+1.  Headless Ubuntu: https://help.ubuntu.com/community/Installation/MinimalCD
+
+2.  Transmission-daemon : https://transmissionbt.com/
+
+3.  Jellyfin media server : https://jellyfin.org
 
 4.  Jackett : https://github.com/Jackett/Jackett
 
-5.  Transmission-daemon : https://transmissionbt.com/
+5.  Radarr : https://radarr.video
 
-6.  Lighttpd + php (basic setup) : https://websiteforstudents.com/setup-lighttpd-web-server-with-php-supports-on-ubuntu-servers/
+6.  Sonarr : https://sonarr.tv
 
 7.  Organizr : https://organizr.app/
 
-8.  automount-usb : https://github.com/raamsri/automount-usb
+8.  eZServerMonitor : https://www.ezservermonitor.com/ (embedded as an iframe in organizr)
 
-9.  eZServerMonitor : https://www.ezservermonitor.com/ (embedded as an iframe in organizr)
+9.  automount-usb : https://github.com/raamsri/automount-usb
 
-10. automatic-ripping-machine : https://github.com/automatic-ripping-machine/automatic-ripping-machine  (Untested, user switched from arm to admin)
-
-11. MondoRescue : http://www.mondorescue.org
 
 ## Miscellaneous
 
