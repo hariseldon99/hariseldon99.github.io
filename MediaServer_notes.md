@@ -781,6 +781,78 @@ As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned med
 
   [Turnkey Linux MediaServer: Simple Network Attached Media Storage](https://www.turnkeylinux.org/mediaserver)
 
+### Web-based SSH terminal
+If you want to ssh to your server using just the web browser, you can install a [web-based SSH client](https://en.wikipedia.org/wiki/Web-based_SSH). I recomment [wetty](https://github.com/butlerx/wetty), which provides terminal access in browser over http/https and/or ssh (if you have that running). The installation instructions are somewhat vague and outdated, so I describe my setup below:
+
+* In your server, first install [nodejs](https://nodejs.org/en/) and [openssl](https://www.openssl.org/) (for encrypted logins):
+
+  ```console
+    $ sudo apt install nodejs openssl
+  ```
+  
+ * You can use SSH for the remote login, or just use a local shell. If you want to use SSH and haven't set it up already, then do so now. [Follow these instructions](https://linuxize.com/post/how-to-enable-ssh-on-ubuntu-18-04/) to setup SSH server.
+ 
+ * Next, install the [yarn package manager](https://yarnpkg.com/) for nodejs. Follow the [instructions on their website](https://classic.yarnpkg.com/en/docs/install/#debian-stable) to do so
+ 
+ * Then, create system user 'wetty' and system directories that it needs to run the wetty software
+ 
+   ```console
+     $ sudo mkdir /var/lib/wetty && mkdir /etc/wetty
+     $ sudo useradd -M wetty && usermod -d /var/lib/wetty -s /usr/sbin/nologin wetty
+     $ sudo chown -R wetty.wetty /var/lib/wetty /etc/wetty
+   ```
+
+ * Install wetty using the yarn package manager
+
+   ```console
+     $ sudo yarn global add wetty
+   ```
+
+ * For security reasons, you want to run wetty using [SSL encryption]() and the [https protocol](https://www.cloudflare.com/learning/ssl/what-is-https/). You need to generate the [SSL certificates](https://www.cloudflare.com/learning/ssl/what-is-an-ssl-certificate/) for this, so run
+ 
+   ```console
+     $ cd /etc/wetty
+     $ sudo -u wetty openssl req -x509 -newkey rsa:2048 -keyout key.pem -out cert.pem -days 30000 -nodes
+   ```
+
+ * In order to launch wetty using systemd, copy the code below and save it to the file /etc/systemd/system/wetty.service
+   If you don't want to use SSH, then remove the '--forcessh' flag from the ExecStart line below.
+ 
+   ```
+    #systemd unit file
+    #
+    # place in /etc/systemd/system
+    # systemctl enable wetty.service
+    # systemctl start wetty.service
+
+    [Unit]
+    Description=Wetty Web Terminal
+    After=network.target
+
+    [Service]
+    ExecStart=/usr/local/bin/wetty --forcessh --sslkey /etc/wetty/key.pem --sslcert /etc/wetty/cert.pem
+    User = wetty
+    Group = wetty
+
+
+    [Install]
+    WantedBy=multi-user.target
+   ```
+ * Enable and start the wetty daemon in systemd
+ 
+   ```console
+     $ sudo systemd enable wetty
+     $ sudo systemd start wetty
+   ```
+ 
+ * Finally, if you are running a firewall, then open the https port (number 443/tcp) and default port for wetty (3000/tcp). 
+ 
+ * You'll be able to login to your server shell via any web browser with the linnk 'https://ip-address:3000/wetty'. You can even include it as a [tab in your organizr setup](https://docs.organizr.app/books/setup-features/page/tabs). No need to install ssh clients if you can't.
+ 
+ ![Wetty screenshot](wetty.png)
+ 
+ * In case you get a "Your connection is not private" error in your browser, ignore it. It just means that it can't verify the SSl certificate you generated before. It'll still work. Just proceed to the server even if it is labelled unsafe.
+ 
 ## Further Reading:
 
 * [HTPC Download Box](https://github.com/sebgl/htpc-download-box) - Same basic setup as this one, but with dockers
