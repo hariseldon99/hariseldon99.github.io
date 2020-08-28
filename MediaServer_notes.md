@@ -12,6 +12,7 @@
 - [Final Step: Client software](#final-step-client-software)
 - [Miscellaneous](#miscellaneous)
 - [Extras](#extras)
+- [Further Reading](#further-reading)
 - [TODO:](#todo)
   
 ## Introduction
@@ -594,7 +595,7 @@ Finally, I opted for RAM transcoding, where transcoded files are written to RAM 
    * [Installing Radarr, Sonarr and Deluge on your Unraid Server](https://blog.harveydelaney.com/installing-radarr-sonar-and-deluge-on-your-unraid-setup/)
 
 
-Indexers enabled:
+Indexers enabled in Jackett:
 
 ![Indexers Enabled](image.png)
 
@@ -617,7 +618,7 @@ An excellent software for keeping all your media services together for easy view
 
   [The Ultimate Organizr V2 Setup Guide for Windows](https://smarthomepursuits.com/install-organizr-v2-windows/)
 
-The instructions can be readily adapted to Ubuntu.
+The above-mentioned instructions can be readily adapted to Ubuntu. I would recommend installing the latest development version, as it has more features than the stable version. 
 
 Finally, an interesting trick can be to run a simple PHP-web based system monitor and enbed the output on your organizr home page. I chose [eZServerMonitor](https://www.ezservermonitor.com/) due to its simplicity and low footprint. Install it in a subdirectory of your organizr install, then open Organizr page in your browser, go to 'settings -> Tab Editor -> Homepage Items -> CUSTOMHTML-1' and input the following html markup tag 
   
@@ -625,6 +626,9 @@ Finally, an interesting trick can be to run a simple PHP-web based system monito
         <iframe src="http://192.168.1.2/apps/ezservermonitor/index.php" name="System Monitor" height="1400px" width="100%" title="System Monitor"></iframe>
      ```
   Once this is saved and enabled, the Organizr homepage should show a nice big embedded frame with all your machine status information in it.
+     
+  This is what my Organizr Homepage looks like   
+  ![Organizr Homepage](Screenshot%20from%202020-08-28%2019-04-00.png)
      
 ## Step 6: Users, Groups and Permissions
 
@@ -776,6 +780,12 @@ In case you need to [transcode](https://searchapparchitecture.techtarget.com/def
 As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned media server installation CD that does a lot of what I've described above and more! Might want to check that out:
 
   [Turnkey Linux MediaServer: Simple Network Attached Media Storage](https://www.turnkeylinux.org/mediaserver)
+
+## Further Reading:
+
+* [HTPC Download Box](https://github.com/sebgl/htpc-download-box) - Same basic setup as this one, but with dockers
+
+* [Smart Home Beginner](https://www.smarthomebeginner.com/)
 
 ## TODO:
 
