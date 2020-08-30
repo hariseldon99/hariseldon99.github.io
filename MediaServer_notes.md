@@ -861,6 +861,8 @@ If you want to ssh to your server using just the web browser, you can install a 
 
 ## TODO:
 
-1. Config mondorescue to backup to iso (http://www.mondorescue.org/docs.shtml)
+1. Config mondorescue to backup to iso (http://www.mondorescue.org/docs.shtml) - configs minus multimedia.
 
-2. Look into WAN access via openvpn. Don't forward any ports from WAN to LAN (other than bittorrent)
+2. Look into WAN access via reverse proxy or openvpn.
+
+3. Resolve nginx/organizr/wetty config issue where these spam auth.log to spam every 5 secs while running.
