@@ -867,6 +867,6 @@ If you want to ssh to your server using just the web browser, you can install a 
 
 3. Resolve nginx/organizr/wetty config issue where these spam auth.log to spam every 5 secs while running.
 
-3. The FOSS nouveau driver might support hardware transcoding (VAAPI) with the nvidia 650M: Ask around about this
-   * [https://nouveau.freedesktop.org/wiki/FeatureMatrix/](nouveau feature matrix)
-   * [https://nouveau.freedesktop.org/wiki/CodeNames/](nvidia code names)
+3. The FOSS nouveau driver might support hardware transcoding (VAAPI) with the nvidia 650M: Ask[around about this
+   * [nouveau feature matrix](https://nouveau.freedesktop.org/wiki/FeatureMatrix/)
+   * [nvidia code names for nouveau](https://nouveau.freedesktop.org/wiki/CodeNames/)
