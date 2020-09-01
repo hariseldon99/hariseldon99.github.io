@@ -724,7 +724,7 @@ You can also use any web browser and connect via organizr. In any case, clients 
 
 It goes without saying that this machine is running 24/7. Laptops are generally not designed for continuous running and the cpu can run fairly hot. It is important to manage this as well as possible. The best way is to install fan control software that adjusts the speed of the cpu fan to maximize cooling. There are numerous software for this on linux (google for them). The standard [lm-sensors](https://github.com/lm-sensors/lm-sensors) tool does not detect my cpu fan no matter what. Thus, I have chosen to try "[samsung-tools](https://loms.voria.org/viewtopic.php?p=5798#p5798)", a general toolkit designed for samsung laptops using the .
 
-Samsung-tools for linux can set the fan speed to 'overclock' mode, where the fan presumably cools more aggressively. However, the setting seems to be non-persistent, meaning it disappears after a reboot. Therefore, I've setup an [hourly user-level cron job](https://help.ubuntu.com/community/CronHowto) to set it to overclock mode. This should, in principle, maximize cooling. The software can be installed on ubuntu from the PPA given below:
+Samsung-tools for linux can set the fan speed to 'overclock' mode, where the fan presumably cools more aggressively. However, the setting seems to be non-persistent, meaning it disappears after a reboot. Therefore, I've setup a [user-level cron job](https://help.ubuntu.com/community/CronHowto) to set it to overclock mode at bootup. This should, in principle, maximize cooling. The software can be installed on ubuntu from the PPA given below:
 
 [Linux On My Samsung](https://launchpad.net/~voria/+archive/ubuntu/ppa)
 
@@ -732,6 +732,13 @@ Simply run
   ```console
   $ sudo add-apt-repository ppa:voria/ppa && apt install samsung-tools
   ```
+Note that samsung-tools needs [D-Bus](https://dbus.freedesktop.org/doc/dbus-tutorial.html) to work, so cron can't directly run it unless it has logged in as a user. An ugly hack for this is a  cron job like
+
+```console
+@reboot sleep 20 && ssh localhost samsung-tools -c overclock 
+```
+
+where ssh has been setup for login by key pairs locally. [See this howto](https://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/) for that.
 
 Also, I thought it a good idea to downclock the CPU in order to minimize overheating. Doesn't seem to effect transcoding or streaming. Do this with [cpufrequtils](http://www.thinkwiki.org/wiki/How_to_use_cpufrequtils) as follows
 
