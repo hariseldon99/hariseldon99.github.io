@@ -871,8 +871,13 @@ If you want to ssh to your server using just the web browser, you can install a 
 1. Config mondorescue to backup to iso (http://www.mondorescue.org/docs.shtml) - configs minus multimedia.
 
 2. Look into WAN access via reverse proxy or openvpn.
-   **Update:** Reverse proxy working for all except transmission (partial, disabled now), amule (failed) and wetty (failed)
-               Reverse proxy working for radarr, sonarr, lidarr, jackett, and jellyfin. They can be safely firewalled.
+
+   **Update:**
+   * Reverse proxy working for all except transmission (partial, disabled now), amule (failed) and wetty (failed)
+   
+   * Reverse proxy working for radarr, sonarr, lidarr, jackett, and jellyfin. They are safely firewalled.
+   
+   * Have not configged SSL yet.
 
 3. Resolve nginx/organizr/wetty config issue where these spam auth.log to spam every 5 secs while running.
 
