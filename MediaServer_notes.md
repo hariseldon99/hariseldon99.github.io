@@ -871,29 +871,9 @@ If you want to ssh to your server using just the web browser, you can install a 
 1. Config mondorescue to backup to iso (http://www.mondorescue.org/docs.shtml) - configs minus multimedia.
 
 2. Look into WAN access via reverse proxy or openvpn.
+   **Update:** Reverse proxy working for all except transmission (partial, disabled now), amule (failed) and wetty (failed)
+               Reverse proxy working for radarr, sonarr, lidarr, jackett, and jellyfin. They can be safely firewalled.
 
 3. Resolve nginx/organizr/wetty config issue where these spam auth.log to spam every 5 secs while running.
 
-3. The FOSS nouveau driver might support hardware transcoding (VAAPI/VDPAU) with the nvidia 650M: Ask around about this
-   * [nouveau feature matrix](https://nouveau.freedesktop.org/wiki/FeatureMatrix/)
-   * [nvidia code names for nouveau](https://nouveau.freedesktop.org/wiki/CodeNames/)
-   * [Hardware Video Acceleration](https://wiki.archlinux.org/index.php/Hardware_video_acceleration)
-   * **Problem**: VAAPI with nouveau yields driver error
-   ```console
-   $ sudo su
-   # modprobe nouveau
-   # export DRI_PRIME=1
-   # export LIBVA_DRIVER_NAME=nouveau
-   # vainfo
-   error: XDG_RUNTIME_DIR not set in the environment.
-   error: can't connect to X server!
-   libva info: VA-API version 1.4.1
-   libva info: va_getDriverName() returns 0
-   libva info: User requested driver 'nouveau'
-   libva info: Trying to open /usr/lib/x86_64-linux-gnu/dri/nouveau_drv_video.so
-   libva info: Found init function __vaDriverInit_1_1
-   libva error: /usr/lib/x86_64-linux-gnu/dri/nouveau_drv_video.so init failed
-   libva info: va_openDriver() returns 2
-   vaInitialize failed with error code 2 (resource allocation failed),exit
-   ```
-   * **Question**: Does jellyfin support VDPAU? Ask around.
+4. Organizr acts like ddos when nginx is configged with fail2ban with ddos protection. Ip gets banned unless whitelisted.
