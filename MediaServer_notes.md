@@ -873,9 +873,9 @@ If you want to ssh to your server using just the web browser, you can install a 
 2. Look into WAN access via reverse proxy or openvpn.
 
    **Update:**
-   * Reverse proxy working for all except transmission (partial, disabled now), jellyfin (partial, disabled now: needs sockets), amule (failed) and wetty (failed)
+   * Reverse proxy working for all except transmission (partial, disabled now), amule (failed) and wetty (failed)
    
-   * Reverse proxy working for radarr, sonarr, lidarr, jackett. They are safely firewalled.
+   * Reverse proxy working for radarr, sonarr, lidarr, jellyfin and jackett. They are safely firewalled.
    
    * Have not configged SSL yet.
 
