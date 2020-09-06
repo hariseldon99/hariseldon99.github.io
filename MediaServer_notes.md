@@ -882,3 +882,5 @@ If you want to ssh to your server using just the web browser, you can install a 
 3. Resolve nginx/organizr/wetty config issue where these spam auth.log to spam every 5 secs while running.
 
 4. Organizr acts like ddos when nginx is configged with fail2ban with ddos protection. Ip gets banned unless whitelisted.
+
+5. Jackett no longer loads in organizr iframe after reverse proxy config.
