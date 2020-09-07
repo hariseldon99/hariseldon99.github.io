@@ -767,8 +767,8 @@ The web interface for the [transmission bittorrent client](https://transmissionb
 
 Alternatively, you can try more sophisticated bittorrent clients with more detailed web interfaces. Examples are [deluge](https://deluge-torrent.org/) and [qbittorrent](https://www.qbittorrent.org/). However, transmission, coded mainly in C/C++, [has the lowest resource usage of all bittorrent clients](https://transmissionbt.com/about/). Deluge, coded in python, consumes much more memory. Qbittorrent is written in C++, and is, by accounts, pretty lean, although I have not tried it. [See this link](https://www.linuxbabe.com/ubuntu/install-qbittorrent-ubuntu-18-04-desktop-server) for headless config for qbittorrent.
 
-### Additional peer-to-peer apps
-In addition to bittorrent, I'm experimenting with other [p2p](https://techterms.com/definition/p2p) networks. The Radarr and Sonarr PVR applications only support bittorrent and usenet, as far as I know. In addition, I have tried the following independently
+### Additional downloaders
+In addition to bittorrent, I'm experimenting with other downloaders [p2p](https://techterms.com/definition/p2p) networks. The Radarr and Sonarr PVR applications only support bittorrent and usenet, as far as I know. In addition, I have tried the following independently
 
  * [Amule](https://www.amule.org/): A p2p application mainly accessing the [EDonkey and Kad networks](https://www.freezenet.ca/guides/filesharing-and-distribution/how-to-connect-to-the-ed2k-and-kad-networks-emule/): 
  
@@ -780,8 +780,12 @@ In addition to bittorrent, I'm experimenting with other [p2p](https://techterms.
 
   * [MLdonkey](http://mldonkey.sourceforge.net): A p2p client (with a headless web interface) that supports multiple p2p networks. The standard setup described in their wiki should work well. Haven't really tried it as it doesn't integrate with any of the indexers (radarr, sonarr etc).
   
-### Remote manual transcoding
-In case you need to [transcode](https://searchapparchitecture.techtarget.com/definition/transcoding) downloaded videos manually in order to improve playback, but need a remote interface to the server to do that, check out the [docker installation of handbrake (ffmpeg)](https://github.com/jlesage/docker-handbrake) that redirects to a web view. Truth be told, [ffmpeg](https://ffmpeg.org/) performs poorly on this laptop anyway, so setting up a remote interface might not be worth it. Instead, I choose to [mount the jellyfin directory over sshfs](https://www.linode.com/docs/networking/ssh/using-sshfs-on-linux/) on a more powerful machine and transcode [using handbrake](https://handbrake.fr/).
+  * [Youtube Downloader](https://ytdl-org.github.io/youtube-dl/) with a nice [php-web interface](https://github.com/outkastm/Youtube-dl-WebUI). If you've got nginx setup already then simply clone the repository into your website.
+  
+### Reverse Proxy
+The configurations above basically install a bunch of servers that have to be accessed directly using the url and port numbers. This can be a problem since firewalls will have to allow traffic into those ports, and WAN access is unsafe without encrryption. If you want WAN access to your server, then it is better to set up all services via [reverse proxies](https://www.cloudflare.com/learning/cdn/glossary/reverse-proxy/) in [nginx](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/). See this document for a decent guide on reverse proxying all these services.
+
+ * [How to Setup a Reverse Proxy in OMV with Let’s Encrypt SSL for Sabnzbd, Radarr, Sonarr and Transmission](https://daan.dev/how-to/reverse-proxy-omv-letsencrypt-sabnzbd-radarr-sonarr-transmission/3/)
 
 ### TurnKey Linux MediaServer
 As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned media server installation CD that does a lot of what I've described above and more! Might want to check that out:
@@ -874,7 +878,8 @@ If you want to ssh to your server using just the web browser, you can install a 
 
    **Update:**
    * Reverse proxy working for all except wetty (failed). Other services are all behind reverse proxy and safely firewalled.
-   
+   * For wetty, reverse proxy will only work with SSL. Once SSL is enabled, follow instructions at:
+     [How to Access Linux Server Terminal in Web Browser Using ‘Wetty (Web + tty)’ Tool] (https://www.tecmint.com/access-linux-server-terminal-in-web-browser-using-wetty/)
    * Have not configged SSL yet. WAN forwarding is currently still disabled.
 
 3. Resolve nginx/organizr/wetty config issue where these spam auth.log to spam every 5 secs while running.
