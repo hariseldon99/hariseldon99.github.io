@@ -879,7 +879,7 @@ If you want to ssh to your server using just the web browser, you can install a 
    **Update:**
    * Reverse proxy working for all except wetty (failed). Other services are all behind reverse proxy and safely firewalled.
    * For wetty, reverse proxy will only work with SSL. Once SSL is enabled, follow instructions at:
-     [How to Access Linux Server Terminal in Web Browser Using ‘Wetty (Web + tty)’ Tool] (https://www.tecmint.com/access-linux-server-terminal-in-web-browser-using-wetty/)
+     [How to Access Linux Server Terminal in Web Browser Using ‘Wetty (Web + tty)’ Tool](https://www.tecmint.com/access-linux-server-terminal-in-web-browser-using-wetty/)
    * Have not configged SSL yet. WAN forwarding is currently still disabled.
 
 3. Resolve nginx/organizr/wetty config issue where these spam auth.log to spam every 5 secs while running.
