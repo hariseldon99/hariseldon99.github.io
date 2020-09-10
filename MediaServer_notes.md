@@ -552,7 +552,7 @@ Usually, once the intel graphics drivers are up and running, Jellyfish can autom
 [archlinux wiki: Hardware Video Acceleration](https://wiki.archlinux.org/index.php/Hardware_video_acceleration#Verifying_VA-API)
 
 ### Hardware Transcoding: Multiple GPU systems
-If, like me, you have multiple graphics cards with one of them being an [nVidia optimus-](https://www.nvidia.com/en-us/geforce/technologies/optimus/)compatible gpu, you may install the nVidia graphics drivers the standard way and use [PRIME profiles](https://wiki.archlinux.org/index.php/PRIME) to switch them around. See the HOWTO in the link below for a simple introduction:
+If you have multiple graphics cards with one of them being an [nVidia optimus-](https://www.nvidia.com/en-us/geforce/technologies/optimus/)compatible gpu, you may install the nVidia graphics drivers the standard way and use [PRIME profiles](https://wiki.archlinux.org/index.php/PRIME) to switch them around. See the HOWTO in the link below for a simple introduction:
 
 [LinuxBabe: How To Switch Between Intel and Nvidia Graphics Card on Ubuntu](https://www.linuxbabe.com/desktop-linux/switch-intel-nvidia-graphics-card-ubuntu)
 
@@ -763,7 +763,7 @@ Trakt is an online platform that primarily keeps track of TV shows and movies yo
  * You can also [scrobble](https://www.wired.com/2012/11/richard-jones-scrobbling/) your movies and shows from Jellyfin to trakt with the [Trakt plugin for Jellyfin](https://github.com/jellyfin/jellyfin-plugin-trakt).
 
 ### Bittorrent thin clients
-The web interface for the [transmission bittorrent client](https://transmissionbt.com/) is a bit basic. You can enhance it with a better web interface, or use a client from another machine to connect to it. Details are available in the [web site of transmission itself](https://transmissionbt.com/resources/). I've tried [transmission web control](https://github.com/ronggang/transmission-web-control/wiki). ~~In addition, I have installed a script that automatically clears completed downloads (once certain sharing criteria are met; these are configurable). The script [can be found here](https://gist.github.com/pawelszydlo/e2e1fc424f2c9d306f3a). It can be "installed" so that transmission runs it after every torrent downloads completely. See [this HOWTO](https://cyberstrikerblog.wordpress.com/2016/04/09/transmission-script-after-download/) for details.~~ (turns out [radarr and sonarr can do this themselves](https://github.com/Sonarr/Sonarr/wiki/Completed-Download-Handling))
+The web interface for the [transmission bittorrent client](https://transmissionbt.com/) is a bit basic. You can enhance it with a better web interface, or use a client from another machine to connect to it. Details are available in the [web site of transmission itself](https://transmissionbt.com/resources/). I've tried [transmission web control](https://github.com/ronggang/transmission-web-control/wiki). 
 
 Alternatively, you can try more sophisticated bittorrent clients with more detailed web interfaces. Examples are [deluge](https://deluge-torrent.org/) and [qbittorrent](https://www.qbittorrent.org/). However, transmission, coded mainly in C/C++, [has the lowest resource usage of all bittorrent clients](https://transmissionbt.com/about/). Deluge, coded in python, consumes much more memory. Qbittorrent is written in C++, and is, by accounts, pretty lean, although I have not tried it. [See this link](https://www.linuxbabe.com/ubuntu/install-qbittorrent-ubuntu-18-04-desktop-server) for headless config for qbittorrent.
 
@@ -777,8 +777,6 @@ In addition to bittorrent, I'm experimenting with other downloaders [p2p](https:
       * You may also need the [non-web remote gui](http://wiki.amule.org/wiki/FAQ_amulegui) for initial access and config. 
       
       * Note that radarr, sonarr, lidarr etc do not integrate with edonkey or any other p2p network besides usenet and bittorrent. As a workaround, set the [incoming folder of amule downloads](https://wiki.amule.org/wiki/AMule_files#Directories) to wherever (I have it set to /var/lib/amuled/.aMule/Incoming), then install the ["Auto Organnize Plugin"](https://jellyfin.org/docs/general/server/plugins/index.html#auto-organize) to Jellyfin and have it monitor the amule download folder for content, which it then integrates into Jellyfin's Libraries. This way, I can manually set downloads and they, at least, get integrated into Jellyfin properly.
-
-  * [MLdonkey](http://mldonkey.sourceforge.net): A p2p client (with a headless web interface) that supports multiple p2p networks. The standard setup described in their wiki should work well. Haven't really tried it as it doesn't integrate with any of the indexers (radarr, sonarr etc).
   
   * [Youtube Downloader](https://ytdl-org.github.io/youtube-dl/) with a nice [php-web interface](https://github.com/outkastm/Youtube-dl-WebUI). If you've got nginx setup already then simply clone the repository into your website.
   
@@ -804,5 +802,6 @@ As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned med
 1. Look into WAN access via reverse proxy.
 
    * Have not configged SSL yet. WAN forwarding is currently still disabled.
+   * Problem is authentication. Radarr, Sonarr, Lidarr, jackett and Transmission all have independent authentication (all are presently disabled, so exposing them to internet is risky) and needs to be maintained separately. Only Jellyfin and Organizr can have synchronized authentication.
 
 2. Organizr acts like ddos when nginx is configged with fail2ban with ddos protection. Ip gets banned unless whitelisted.
