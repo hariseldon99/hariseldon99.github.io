@@ -803,5 +803,9 @@ As it turns out, [TurnKey Linux](https://www.turnkeylinux.org/) has a canned med
 
    * Have not configged SSL yet. WAN forwarding is currently still disabled.
    * Problem is authentication. Radarr, Sonarr, Lidarr, jackett and Transmission all have independent authentication (all are presently disabled, so exposing them to internet is risky) and needs to be maintained separately. Only Jellyfin and Organizr can have synchronized authentication.
+   * All Authentication can be done via LDAP + nginx reverse proxy. Organizr and jellyfin can use LDAP directly, all else can use secure LDAP via nginx. Can also add shellinabox.
+      * https://riegers.in/nextcloud-using-a-reverse-proxy/
+      * https://icicimov.github.io/blog/web%20server/Nginx-LDAP-module/
+      * https://ubuntu.com/server/docs/service-ldap
 
 2. Organizr acts like ddos when nginx is configged with fail2ban with ddos protection. Ip gets banned unless whitelisted.
