@@ -566,7 +566,7 @@ Finally, I opted for RAM transcoding, where transcoded files are written to RAM 
  
  [How to Create and Use a Ramdisk on Ubuntu 18.04](https://linuxhint.com/ramdisk_ubuntu_1804/)
  
- I chose to mount it on the path ['/dev/shm'](https://www.cyberciti.biz/files/linux-kernel/Documentation/filesystems/tmpfs.txt), and use the Jellyfin transcode settings page to point the transcoder to it (see screenshot below). The settings can be obtained by navigating in the Jellyfish Home page as follows: Navigation menu on the left + "Admin : Dashboard --> Playback --> Transcoding (top of the page)"
+ I chose to mount it on the path '/var/lib/jellyfin/transcodes', the default location where jellyfin stores transcoded data. If you need to use any other path, then the settings can be obtained by navigating in the Jellyfish Home page as follows: Navigation menu on the left + "Admin : Dashboard --> Playback --> Transcoding (top of the page)"
  
  ![Transcoder Settings](transcoder_settings.png)
 
@@ -584,7 +584,7 @@ Finally, I opted for RAM transcoding, where transcoded files are written to RAM 
   
     b. Sonarr: [GitHub Page](https://github.com/Sonarr/Sonarr)
   
-   Note that you will have to setup supported online indexers for bittorrent. There are only a few for Radarr and Sonarr, and they don't always work well. Therefore, I also installed the Jackett proxy server which connects to thousands of online indexers and configured radarr and sonarr to use Jackett instead. For instructions, checkout the [GitHub page for jackett](https://github.com/Jackett/Jackett).
+   Note that you will have to setup supported online indexers for bittorrent. There are only a few for Radarr and Sonarr, and they don't always work well. Therefore, I also installed the Jackett proxy server which connects to thousands of online indexers and configured radarr and sonarr to use Jackett instead. For instructions, checkout the [GitHub page for jackett](https://github.com/Jackett/Jackett). Also, see [this section](#bypass-cloudflare-protection) for details on how to use flaresolverr with jackett to bypass bot checks.
  
   For further details, checkout these HOWTOs:
  
@@ -749,6 +749,40 @@ Also, I thought it a good idea to downclock the CPU in order to minimize overhea
   ```
 
 ## Extras
+
+### Bypass Cloudflare protection
+
+As of June 2020, a lot of torrent indexer websites are protected by services like [cloudfare](https://www.cloudflare.com) and others. These online services prevent bots (like [Jackett](https://github.com/Jackett/Jackett), which I had recommended for automatically searching for torrents while [installing indexers](#step-3:-Install-bittorrent-client-and-indexers:)) from accessing these sites by putting in automatic Turing tests and/or [CAPTCHAS](https://www.pandasecurity.com/en/mediacenter/panda-security/what-is-captcha/) designed for manual intervention. As it happens, the fella developing Jackett has created a workaround called [flaresolverr]. This is a software that runs as a service, and Jackett can connect to it, have it launch a [headless chromium browser session](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md) and try to fool the bot blockers into thinking that it is a human. It's not follproof, but increasingly necessary as many torrent sites are getting bot blockers to prevent malicious hackers from crashing their sites. The github page of flaresolverr instructs how to set it up, but does not have a way to startup on boot. On Ubuntu, the following systemd script should do it. Assuming that flaresolverr has been unpacked to "/usr/local/flaresolverr", simply create the file "/etc/systemd/system/flaresolverr.service" and add:
+
+```console
+ [Unit]
+Description=Systemd service script for flaresolverr
+
+Wants=network.target
+After=syslog.target network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/flaresolverr/flaresolverr
+Restart=on-failure
+RestartSec=10
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
+ 
+ ```
+
+Then, run the following:
+
+```console
+  $ sudo chmod 640 /etc/systemd/system/flaresolverr.service
+  $ sudo systemctl daemon-reload
+  $ sudo systemctl enable flaresolverr
+  $ sudo systemctl start flaresolverr
+  ```
+ That's it. In case any other configuration is required, then the systemd script can be modified accordingly.
 
 ### Automatic DVD ripping:
 
