@@ -3,7 +3,7 @@
 This is my github page. Below are links to codes and instructions related to my various academic projects
 
 ## Webpages:
-1. [My Homepage](https://www.ph.utexas.edu/~daneel).
+1. [My Homepage](https://physics.utexas.edu/~daneel/).
 
 2. [My GitHub Repository](https://github.com/hariseldon99) - Repository of my Source Codes
 
