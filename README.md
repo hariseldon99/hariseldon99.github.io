@@ -9,6 +9,7 @@ This is my github page. Below are links to codes and instructions related to my 
 2. [My GitHub Repository](https://github.com/hariseldon99) - Repository of my Source Codes.
 3. [Class page for MSPH401](https://sites.google.com/a/phys.buruniv.ac.in/statmech2/) - Statistical Mechanics.
 4. [Class page for MSPH306](https://github.com/hariseldon99/msph306) - Computational Physics.
+5. [Old class page for MSPH402B](https://github.com/hariseldon99/msph402b) - Teaching Materials from old Computational Physics class.
 
 ## Codes and Packages:
 
@@ -16,5 +17,5 @@ This is my github page. Below are links to codes and instructions related to my 
 2. [hariseldon99/DTC-kitaev](https://github.com/hariseldon99/DTC-kitaev): Jupyter Notebooks on Floquet Time Crystals in Kitaev Systems.
 3. [hariseldon99/dtwa_quantum_spins](https://github.com/hariseldon99/dtwa_quantum_spins) : Discrete Truncated Wigner Approximation with BBGKY heirarchy.
 4. [hariseldon99/periodic_lipkin](https://github.com/hariseldon99/periodic_lipkin): Jupyter Notebooks on Dynamical Many Body Localization in the Periodically Driven Long-Range Lipkin-Meshkov-Glick Model.
-5. [hariseldon99/ising_exact](https://github.com/hariseldon99/ising_exact) : Exact dynamics of ising systems.
+5. [hariseldon99/ising_exact](https://github.com/hariseldon99/ising_exact) : Exact dynamics of ising systems (kinda redundant now since it can be done easily using [QuTiP](https://qutip.org/)) .
 6. [hariseldon99/lindblad_phasepoints](https://github.com/hariseldon99/lindblad_phasepoints) : BBGKY dynamics for open (Lindbladian) quantum spin gases in a radiation field, averaged over phase point operators.
